@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Winston — Disciplining God</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:wght@400;500;600&display=swap');
+
 /* ═══════════════════════════════════════════
    TOKENS
 ═══════════════════════════════════════════ */
@@ -32,6 +36,7 @@
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+* { font-family: 'Source Code Pro', 'Courier New', monospace; }
 html { font-size:16px; -webkit-font-smoothing:antialiased; }
 body { background:var(--black); color:var(--text); font-family:var(--mono); font-weight:400; height:100vh; overflow:hidden; display:flex; flex-direction:column; }
 
@@ -4518,6 +4523,10 @@ async function processMessage(text) {
   document.getElementById('sendBtn').disabled = false;
 }
 
+
+
+// Initialize
+try { initGate(); } catch(e) { console.error(e); }
 </script>
 </body>
 </html>
