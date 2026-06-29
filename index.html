@@ -889,26 +889,92 @@ details summary:hover { color:var(--gold); }
   </div>
 
   <!-- center -->
-  <div class="gate-center">
-    <div class="gate-eyebrow">NYU Center for Global Affairs — Master's Thesis, 2026</div>
-    <div class="gate-badge">
-      <div class="gate-stamp">RESTRICTED</div>
-      <div class="gate-title-small">Classified Document</div>
-      <div class="gate-title">Disciplining God:<br>The Meaning of Sovereignty</div>
-      <div class="gate-subtitle">A Sovereignty Analysis Framework</div>
-      <div class="gate-author">Maahi Gupta</div>
-    </div>
-
-    <div class="gate-access">
-      <div class="gate-access-label">Access Code Required</div>
-      <div class="gate-code-display">Your code: <span id="gate-code-display">—</span></div>
-      <div class="gate-input-row">
-        <input class="gate-input" id="gate-input" type="text" placeholder="ENTER CODE" maxlength="20" autocomplete="off" spellcheck="false">
-        <button class="gate-submit" onclick="submitGate()">Enter →</button>
-      </div>
-      <div class="gate-error-msg" id="gate-error"></div>
-    </div>
+  <div style="
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index:10;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:24px;
+  text-align:center;
+  width:600px;
+  max-width:90vw;
+">
+  <div style="font-family:'Source Code Pro',monospace;font-size:10px;letter-spacing:0.22em;color:#5A5550;text-transform:uppercase;">
+    NYU Center for Global Affairs — Master's Thesis, 2026
   </div>
+
+  <div style="
+    border:1px solid rgba(255,255,255,0.14);
+    padding:36px 52px 32px;
+    background:rgba(18,18,18,0.96);
+    position:relative;
+    width:100%;
+  ">
+    <div style="
+      font-family:'Playfair Display',Georgia,serif;
+      font-style:italic;
+      font-size:clamp(28px,4vw,48px);
+      color:#E8E4DC;
+      font-weight:400;
+      line-height:1.15;
+      margin-bottom:10px;
+    ">Disciplining God:<br>The Meaning of Sovereignty</div>
+    <div style="font-family:'Source Code Pro',monospace;font-size:10px;letter-spacing:0.18em;color:#5A5550;text-transform:uppercase;margin-bottom:6px;">A Sovereignty Analysis Framework</div>
+    <div style="font-family:'Source Code Pro',monospace;font-size:10px;letter-spacing:0.18em;color:#C9A84C;text-transform:uppercase;">Maahi Gupta</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;">
+    <div style="font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:0.22em;color:#5A5550;text-transform:uppercase;">Access Code Required</div>
+    <div style="font-family:'Source Code Pro',monospace;font-size:13px;color:#9A9590;">
+      Your code: <span id="gate-code-display" style="color:#C9A84C;font-size:16px;font-weight:700;letter-spacing:0.1em;">—</span>
+    </div>
+    <div style="display:flex;width:100%;max-width:380px;">
+      <input 
+        id="gate-input" 
+        type="text" 
+        placeholder="TYPE CODE EXACTLY" 
+        maxlength="25" 
+        autocomplete="off" 
+        spellcheck="false"
+        onkeydown="if(event.key==='Enter')submitGate()"
+        style="
+          flex:1;
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.2);
+          border-right:none;
+          color:#E8E4DC;
+          font-family:'Source Code Pro',monospace;
+          font-size:13px;
+          letter-spacing:0.14em;
+          padding:12px 16px;
+          outline:none;
+          text-transform:uppercase;
+        "
+      >
+      <button 
+        onclick="submitGate()"
+        style="
+          background:#C9A84C;
+          border:none;
+          color:#0A0A0A;
+          font-family:'Source Code Pro',monospace;
+          font-size:11px;
+          font-weight:600;
+          letter-spacing:0.12em;
+          padding:12px 20px;
+          cursor:pointer;
+          text-transform:uppercase;
+          white-space:nowrap;
+        "
+      >Enter →</button>
+    </div>
+    <div id="gate-error" style="font-family:'Source Code Pro',monospace;font-size:11px;color:#C0392B;min-height:18px;font-style:italic;"></div>
+  </div>
+</div>
 
   <!-- bottom bar -->
   <div class="gate-bottombar">
@@ -3207,7 +3273,7 @@ function submitGate() {
     input.classList.remove('error');
     input.classList.add('success');
     errorEl.textContent = 'Access granted. Welcome to the sovereignty framework.';
-    errorEl.style.color = 'var(--gold)';
+    errorEl.style.color = '#C9A84C';
     setTimeout(() => {
       const gate = document.getElementById('gate');
       gate.classList.add('exiting');
