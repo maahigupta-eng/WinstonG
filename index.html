@@ -42,6 +42,7 @@ body { background:var(--black); color:var(--text); font-family:var(--mono); font
   position:fixed; inset:0; background:var(--black); z-index:9999;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   overflow:hidden;
+  animation:fadeIn 0.5s ease forwards;
 }
 #gate.exiting { animation:gateExit 0.8s ease forwards; }
 @keyframes gateExit {
@@ -72,11 +73,11 @@ body { background:var(--black); color:var(--text); font-family:var(--mono); font
 }
 .gate-classification {
   font-size:9px; letter-spacing:0.2em; color:var(--gold); font-family:var(--mono);
-  opacity:0; animation:fadeIn 0.6s ease 0.8s forwards;
+  opacity:1;
 }
 .gate-ref {
   font-size:9px; letter-spacing:0.12em; color:var(--text-3); font-family:var(--mono);
-  opacity:0; animation:fadeIn 0.6s ease 1s forwards;
+  opacity:1;
 }
 
 /* world clocks */
@@ -85,7 +86,7 @@ body { background:var(--black); color:var(--text); font-family:var(--mono); font
   display:flex; justify-content:space-between;
   padding:10px 28px; z-index:2;
   border-bottom:1px solid var(--border);
-  opacity:0; animation:fadeIn 0.6s ease 1.2s forwards;
+  opacity:1;
 }
 .gate-clock { text-align:center; }
 .gate-clock-city { font-size:9px; letter-spacing:0.14em; color:var(--text-2); font-family:var(--mono); text-transform:uppercase; }
@@ -104,8 +105,9 @@ body { background:var(--black); color:var(--text); font-family:var(--mono); font
 /* center content */
 .gate-center {
   position:relative; z-index:3; text-align:center;
-  display:flex; flex-direction:column; align-items:center; gap:0;
-  opacity:0; animation:fadeIn 0.8s ease 1.6s forwards;
+  display:flex; flex-direction:column; align-items:center; gap:20px;
+  opacity:1; padding:20px 0;
+  flex:1; justify-content:center;
 }
 
 .gate-eyebrow {
@@ -206,7 +208,7 @@ body { background:var(--black); color:var(--text); font-family:var(--mono); font
   border-top:1px solid var(--border);
   display:flex; justify-content:space-between; align-items:center;
   z-index:2; background:rgba(10,10,10,0.7);
-  opacity:0; animation:fadeIn 0.6s ease 2s forwards;
+  opacity:1;
 }
 .gate-bottom-left { font-size:8px; letter-spacing:0.14em; color:var(--text-3); font-family:var(--mono); }
 .gate-bottom-center { font-size:8px; letter-spacing:0.2em; color:var(--text-3); font-family:var(--mono); text-align:center; }
