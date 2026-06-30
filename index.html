@@ -36,7 +36,7 @@
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-* { font-family: 'Source Code Pro', 'Courier New', monospace; }
+* { box-sizing: border-box; }
 html { font-size:16px; -webkit-font-smoothing:antialiased; }
 body { background:var(--black); color:var(--text); font-family:var(--mono); font-weight:400; height:100vh; overflow:hidden; display:flex; flex-direction:column; }
 
@@ -275,11 +275,11 @@ header h2 {
 .sidebar::-webkit-scrollbar-thumb { background:var(--border-bright); }
 
 .sidebar-label {
-  font-size:8px; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--gold); margin-bottom:7px; font-family:var(--mono);
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:#C9A84C; margin-bottom:8px; font-family:'Courier New',monospace;
 }
 .sidebar-text {
-  font-size:13px; line-height:1.85; color:var(--text-2); font-family:var(--mono); font-weight:400;
+  font-size:14px; line-height:1.9; color:#9A9590; font-family:'Courier New',monospace; font-weight:400;
 }
 .sidebar-text strong { color:var(--text); font-weight:500; }
 .sidebar-extra { overflow:hidden; max-height:0; transition:max-height 0.35s ease; }
@@ -314,7 +314,7 @@ header h2 {
 .tab-bar::-webkit-scrollbar { display:none; }
 .tab-btn {
   flex-shrink:0; background:none; border:none; border-bottom:2px solid transparent;
-  color:var(--text-3); font-family:var(--mono); font-size:9px; letter-spacing:0.14em;
+  color:#5A5550; font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.1em;
   text-transform:uppercase; padding:11px 16px; cursor:pointer;
   transition:color 0.2s, border-color 0.2s; white-space:nowrap;
 }
@@ -370,7 +370,7 @@ header h2 {
 @keyframes voicepulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
 
 .msg-winston .msg-content {
-  font-size:15px; line-height:2; color:var(--text-2); white-space:pre-wrap; font-family:var(--mono); font-weight:400;
+  font-size:15px; line-height:2; color:#9A9590; white-space:pre-wrap; font-family:'Courier New',monospace; font-weight:400;
 }
 .msg-user { align-self:flex-end; max-width:70%; }
 .msg-user .msg-bubble {
@@ -405,8 +405,8 @@ header h2 {
   position:relative; z-index:1; background:var(--black);
 }
 .input-area textarea {
-  flex:1; background:var(--surface); border:1px solid var(--border);
-  border-radius:4px; color:var(--text); font-family:var(--mono); font-size:15px;
+  flex:1; background:#181818; border:1px solid rgba(255,255,255,0.07);
+  border-radius:4px; color:#E8E4DC; font-family:'Courier New',monospace; font-size:15px;
   line-height:1.6; padding:10px 14px; resize:none; min-height:42px;
   max-height:130px; outline:none; transition:border-color 0.2s;
 }
@@ -475,7 +475,7 @@ header h2 {
 .v-section-title { font-size:8px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; font-family:var(--mono); }
 .v-card { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:18px 20px; }
 .v-card h3 { font-family:var(--serif); font-style:italic; font-size:16px; color:var(--text); font-weight:400; margin-bottom:8px; }
-.v-card p { font-size:13px; color:var(--text-2); line-height:1.85; margin-bottom:10px; font-family:var(--mono); }
+.v-card p { font-size:14px; color:#9A9590; line-height:1.85; margin-bottom:10px; font-family:'Courier New',monospace; }
 .v-stat-row { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
 .v-stat { flex:1; min-width:100px; background:var(--surface-2); border:1px solid var(--border); border-radius:4px; padding:10px 12px; text-align:center; }
 .v-stat .stat-num { font-size:18px; color:var(--text); font-family:var(--mono); display:block; margin-bottom:3px; }
@@ -769,6 +769,8 @@ details summary:hover { color:var(--gold); }
   .gate-badge { padding:16px 18px 14px; }
 }
 </style>
+</head>
+<body>
 
 <!-- ═══════════════════ GATE SCREEN ═══════════════════ -->
 <div id="gate">
@@ -804,61 +806,61 @@ details summary:hover { color:var(--gold); }
 
   <!-- top bar -->
   <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:16px 28px;z-index:3;border-bottom:1px solid rgba(255,255,255,0.07);">
-    <div style="font-size:8px;color:#6A6560;letter-spacing:0.18em;font-family:'Source Code Pro',monospace;text-transform:uppercase;">NYU Center for Global Affairs</div>
-    <div style="font-size:8px;color:#6A6560;letter-spacing:0.14em;font-family:'Source Code Pro',monospace;text-transform:uppercase;">Transnational Security · 2026</div>
+    <div style="font-size:12px;color:#8A8580;letter-spacing:0.14em;font-family:'Courier New',monospace;text-transform:uppercase;">NYU Center for Global Affairs</div>
+    <div style="font-size:12px;color:#8A8580;letter-spacing:0.1em;font-family:'Courier New',monospace;text-transform:uppercase;">Transnational Security · 2026</div>
   </div>
 
   <!-- clocks -->
   <div style="position:absolute;top:44px;left:0;right:0;display:flex;justify-content:space-between;padding:10px 28px;z-index:3;border-bottom:1px solid rgba(255,255,255,0.07);">
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">New York</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-ny">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT-5</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">New York</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-ny">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT-5</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">Geneva</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-geneva">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+2</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">Geneva</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-geneva">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+2</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">Islamabad</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-islamabad">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+5</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">Islamabad</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-islamabad">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+5</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">Kyiv</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-kyiv">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+3</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">Kyiv</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-kyiv">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+3</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">London</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-london">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+1</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">London</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-london">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+1</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:8px;letter-spacing:0.14em;color:#6A6560;font-family:'Source Code Pro',monospace;text-transform:uppercase;">Naypyidaw</div>
-      <div style="font-size:13px;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-weight:600;margin-top:2px;" id="clock-myanmar">--:--</div>
-      <div style="font-size:8px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+6.5</div>
+      <div style="font-size:15px;letter-spacing:0.1em;color:#8A8580;font-family:'Courier New',monospace;text-transform:uppercase;">Naypyidaw</div>
+      <div style="font-size:16px;color:#E8E4DC;font-family:'Courier New',monospace;font-weight:700;margin-top:3px;" id="clock-myanmar">--:--</div>
+      <div style="font-size:12px;color:#7A7570;font-family:'Source Code Pro',monospace;">GMT+6.5</div>
     </div>
   </div>
 
   <!-- CENTER CONTENT -->
   <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center;width:580px;max-width:88vw;">
 
-    <div style="font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:0.24em;color:#7A7570;text-transform:uppercase;">
+    <div style="font-family:'Source Code Pro',monospace;font-size:13px;letter-spacing:0.24em;color:#7A7570;text-transform:uppercase;">
       NYU Center for Global Affairs — Master's Thesis, 2026
     </div>
 
-    <div style="border:1px solid rgba(255,255,255,0.12);padding:36px 52px 30px;background:rgba(16,16,16,0.97);width:100%;position:relative;">
+    <div id="gate-badge-tilt" style="border:1px solid rgba(255,255,255,0.12);padding:36px 52px 30px;background:rgba(16,16,16,0.97);width:100%;position:relative;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s ease;transform-style:preserve-3d;cursor:default;">
       <div style="font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(26px,3.8vw,46px);color:#E8E4DC;font-weight:400;line-height:1.15;margin-bottom:10px;">
         Disciplining God:<br>The Meaning of Sovereignty
       </div>
-      <div style="font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:0.2em;color:#7A7570;text-transform:uppercase;margin-bottom:8px;">A Sovereignty Analysis Framework</div>
-      <div style="font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:0.2em;color:#C9A84C;text-transform:uppercase;">Maahi Gupta</div>
+      <div style="font-family:'Source Code Pro',monospace;font-size:13px;letter-spacing:0.2em;color:#7A7570;text-transform:uppercase;margin-bottom:8px;">A Sovereignty Analysis Framework</div>
+      <div style="font-family:'Courier New',monospace;font-size:12px;letter-spacing:0.16em;color:#C9A84C;text-transform:uppercase;">Maahi Gupta</div>
     </div>
 
     <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;">
-      <div style="font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:0.24em;color:#7A7570;text-transform:uppercase;">Access Code Required</div>
+      <div style="font-family:'Source Code Pro',monospace;font-size:13px;letter-spacing:0.24em;color:#7A7570;text-transform:uppercase;">Access Code Required</div>
       <div style="font-family:'Source Code Pro',monospace;font-size:13px;color:#7A7570;">
         Your code: <span id="gate-code-display" style="color:#C9A84C;font-size:15px;font-weight:700;letter-spacing:0.12em;">LOADING...</span>
       </div>
@@ -866,20 +868,20 @@ details summary:hover { color:var(--gold); }
         <input id="gate-input" type="text" placeholder="TYPE CODE EXACTLY" maxlength="25" autocomplete="off" spellcheck="false"
           onkeydown="if(event.key==='Enter')submitGate()"
           style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.18);border-right:none;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-size:13px;letter-spacing:0.14em;padding:13px 16px;outline:none;text-transform:uppercase;">
-        <button onclick="submitGate()" style="background:#C9A84C;border:none;color:#0A0A0A;font-family:'Source Code Pro',monospace;font-size:11px;font-weight:700;letter-spacing:0.12em;padding:13px 22px;cursor:pointer;text-transform:uppercase;white-space:nowrap;">
+        <button onclick="submitGate()" style="background:#C9A84C;border:none;color:#0A0A0A;font-family:'Source Code Pro',monospace;font-size:15px;font-weight:700;letter-spacing:0.12em;padding:13px 22px;cursor:pointer;text-transform:uppercase;white-space:nowrap;">
           Enter →
         </button>
       </div>
-      <div id="gate-error" style="font-family:'Source Code Pro',monospace;font-size:11px;color:#C0392B;min-height:18px;font-style:italic;max-width:400px;text-align:center;"></div>
+      <div id="gate-error" style="font-family:'Source Code Pro',monospace;font-size:15px;color:#C0392B;min-height:18px;font-style:italic;max-width:400px;text-align:center;"></div>
     </div>
 
   </div>
 
   <!-- bottom bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 28px;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;z-index:3;">
-    <div style="font-size:8px;color:#6A6560;font-family:'Source Code Pro',monospace;letter-spacing:0.1em;">© 2026 MAAHI GUPTA · ALL ANALYSIS RESERVED</div>
-    <div style="font-size:8px;color:#6A6560;font-family:'Source Code Pro',monospace;letter-spacing:0.1em;">WINSTON SOVEREIGNTY INTELLIGENCE SYSTEM</div>
-    <div style="font-size:8px;color:#6A6560;font-family:'Source Code Pro',monospace;letter-spacing:0.1em;">DISCIPLINING GOD · NON-TRANSFERABLE</div>
+    <div style="font-size:15px;color:#5A5550;font-family:'Courier New',monospace;letter-spacing:0.08em;">© 2026 MAAHI GUPTA · ALL ANALYSIS RESERVED</div>
+    <div style="font-size:15px;color:#5A5550;font-family:'Courier New',monospace;letter-spacing:0.08em;">WINSTON SOVEREIGNTY INTELLIGENCE SYSTEM</div>
+    <div style="font-size:15px;color:#5A5550;font-family:'Courier New',monospace;letter-spacing:0.08em;">DISCIPLINING GOD · NON-TRANSFERABLE</div>
   </div>
 
 </div>
@@ -917,6 +919,24 @@ details summary:hover { color:var(--gold); }
   }
   setClocks();
   setInterval(setClocks, 1000);
+
+  // Tilt effect on badge hover, matcha-cartel style
+  var badge = document.getElementById('gate-badge-tilt');
+  if (badge) {
+    badge.addEventListener('mousemove', function(e) {
+      var rect = badge.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      var rotY = x * 8;
+      var rotX = y * -8;
+      badge.style.transform = 'perspective(900px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(1.015)';
+      badge.style.boxShadow = (8 - rotY) + 'px ' + (8 + rotX) + 'px 40px rgba(0,0,0,0.5)';
+    });
+    badge.addEventListener('mouseleave', function() {
+      badge.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+      badge.style.boxShadow = 'none';
+    });
+  }
 })();
 </script>
 
@@ -1295,6 +1315,15 @@ details summary:hover { color:var(--gold); }
             <p>The misalignment is structural. The SDG framework was built on the Westphalian model. It can count peacekeeping troops. It cannot count the degree to which a state's governing myth retains its hold on the population it claims to represent.</p>
             <div class="decomp-verdict" style="margin-top:12px">Data gap notice: this analysis uses 2023 UN CEB financial reporting. Project-level SDG coding, entity-level outcome indicators, and OCHA Financial Tracking Service crisis-level data would allow Winston to make these claims with greater empirical precision. (UN CEB Financial Statistics 2023; Gupta, "Disciplining God," 2026)</div>
           </div>
+
+          <div class="v-card" style="margin-top:14px">
+            <h3>Top donor governments, 2026 reporting</h3>
+            <p>Funding tracked through the OCHA Financial Tracking Service. The same donors who fund material crisis response rarely fund the symbolic conditions, cultural infrastructure, narrative legitimacy, identity reproduction, that would prevent the crisis from recurring.</p>
+            <div class="chart-wrap" style="height:220px">
+              <canvas id="donorChart"></canvas>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1598,6 +1627,8 @@ details summary:hover { color:var(--gold); }
           <a href="mailto:maahigupta@gmail.com" class="about-contact-btn">maahigupta@gmail.com</a>
         </div>
 
+      </div>
+    </div>
 
     <!-- SOURCES TAB -->
     <div class="tab-panel" id="tab-sources">
@@ -1650,18 +1681,15 @@ details summary:hover { color:var(--gold); }
           <div class="source-entry"><div class="source-author">IMF</div><div class="source-title">Article IV Consultations (Sri Lanka, Pakistan, 2019–2024)</div><div class="source-detail">Empirical grounding for Winston's sovereign risk analysis. Sri Lanka investment-grade as late as 2019; Pakistan's recurring FX crises and EFF 2024 ($7B). The gap between Westphalian indicators and symbolic fragility.</div><span class="source-tag">empirical</span></div>
         </div>
 
-        <div class="source-entry" style="background:var(--phosphor-dim); border: 1px solid var(--phosphor-mid); border-radius: 8px; padding: 16px 20px; margin-top: 8px;">
-          <div class="source-author" style="color: var(--phosphor);">Primary source</div>
+        <div class="source-entry" style="background:var(--gold-dim); border: 1px solid var(--gold-mid); border-radius: 8px; padding: 16px 20px; margin-top: 8px;">
+          <div class="source-author" style="color: var(--gold);">Primary source</div>
           <div class="source-title">Gupta, Maahi — "Disciplining God: The Meaning of Sovereignty"</div>
           <div class="source-detail" style="color: var(--text-secondary);">Master's Thesis, NYU Center for Global Affairs, April 2026. Score: 99/100, Distinction. Winner, NYU SPS Best Thesis/Capstone Award. Supervisor: Dr. Christopher Ankersen. Winston is the AI instantiation of this thesis.</div>
         </div>
 
       </div>
     </div>
-      </div>
-    </div>
 
-    </div>
   </div>
 </div>
 
@@ -2522,11 +2550,19 @@ function initPKChart() {
 }
 
 
-function toggleGuide_unused() {
-  guideOpen = !guideOpen;
-  const drawer = document.getElementById('guide-drawer');
-  if (drawer) drawer.classList.toggle('open', guideOpen);
+let winstonTooltipOpen = false;
+function toggleWinstonTooltip() {
+  winstonTooltipOpen = !winstonTooltipOpen;
+  const tooltip = document.getElementById('winston-tooltip');
+  if (tooltip) tooltip.classList.toggle('open', winstonTooltipOpen);
 }
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.winston-icon-btn') && winstonTooltipOpen) {
+    winstonTooltipOpen = false;
+    const tooltip = document.getElementById('winston-tooltip');
+    if (tooltip) tooltip.classList.remove('open');
+  }
+});
 
 function useGuideQ(el) {
   const text = el.textContent.trim();
@@ -3204,8 +3240,9 @@ function submitGate() {
   if (!input || !errorEl) return;
   const val = input.value.trim().toUpperCase();
   if (!val) return;
+  const activeCode = window._gateCode || currentCode;
   
-  if (val === currentCode) {
+  if (val === activeCode) {
     input.classList.remove('error');
     input.classList.add('success');
     errorEl.textContent = 'Access granted. Welcome to the sovereignty framework.';
@@ -3225,6 +3262,7 @@ function submitGate() {
     setTimeout(() => { input.classList.remove('error'); }, 500);
     if (rejections % 2 === 0) {
       currentCode = generateGateCode();
+      window._gateCode = currentCode;
       const displayEl = document.getElementById('gate-code-display');
       if (displayEl) displayEl.textContent = currentCode;
     }
@@ -3329,100 +3367,9 @@ function renderDecompCard(title, materialItems, symbolicItems, verdict) {
 // ── TAB SWITCHING ─────────────────────────────────────────────────────────────
 
 // ── UN ALLOCATION DATA ───────────────────────────────────────────────────────
-const UN_ENTITIES = [{"name": "UN Secretariat", "dev": 1252318570.0, "hum": 2756094921.0, "peace": 1293697471.0, "global": 2343853018.0, "total": 7645963980.0, "history": [3953427000.0, 4356846000.0, 4204720880.0, 4310389620.0, 5144651100.0, 5613139905.0, 5713034000.0, 5790918528.0, 6238507587.0, 6646401542.0, 6478738801.91, 6388956878.91, 7276591885.0, 7645963980.0]}, {"name": "UN-DPO", "dev": null, "hum": null, "peace": 7226664864.0, "global": null, "total": 7226664864.0, "history": [7616090000.0, 7573730000.0, 7544235000.0, 7273147000.0, 7862742000.0, 8759159000.0, 8876176000.0, 8263932000.0, 7987831961.0, 7732738963.0, 7336866636.0, 7265453455.48, 7091307082.0, 7226664864.0]}, {"name": "CTBTO", "dev": null, "hum": null, "peace": null, "global": 128643691.0, "total": 128643691.0, "history": [null, null, null, null, null, null, null, 124931880.0, 127564070.0, 117462825.0, 113298823.0, 115961255.0, 116556665.0, 128643691.0]}, {"name": "FAO", "dev": 1676604690.0, "hum": 237048898.0, "peace": null, "global": 205573096.0, "total": 2119226684.0, "history": [1414925291.0, 1500342346.0, 1343397572.0, 1379994161.0, 1245513131.0, 1219235388.0, 1201818140.0, 1531753306.0, 1454768694.0, 1584375034.0, 1550512909.76, 1653704076.0, 1942174005.0, 2119226684.0]}, {"name": "IAEA", "dev": null, "hum": null, "peace": null, "global": 750331853.5, "total": 750331853.5, "history": [584867272.0, 522306338.0, 591755992.0, 630242601.0, 580516029.0, 570543764.0, 549644351.0, 642585424.0, 641027397.0, 636895089.0, 671034355.8, 631248581.2, 686985090.5, 750331853.5]}, {"name": "IARC", "dev": null, "hum": null, "peace": null, "global": 50646048.83, "total": 50646048.83, "history": [null, null, null, null, null, null, null, null, 46483338.0, 48360016.0, 53895347.24, 50661507.38, 51288503.73, 50646048.83]}, {"name": "ICAO", "dev": null, "hum": null, "peace": null, "global": 247071089.48, "total": 247071089.48, "history": [235089000.0, 212854153.0, 220499361.0, 231416933.0, 222196722.0, 194803847.0, 192346640.0, 215225968.0, 229964201.0, 231676903.0, 168394389.07, 189407586.9, 198918168.83, 247071089.48]}, {"name": "ICC", "dev": null, "hum": null, "peace": null, "global": 200657524.94, "total": 200657524.94, "history": [null, null, null, null, null, null, null, 186698415.0, 176976518.0, 179393673.0, 191354716.54, 174957054.65, 174399899.94, 200657524.94]}, {"name": "IFAD", "dev": 226278973.0, "hum": null, "peace": null, "global": null, "total": 226278973.0, "history": [783755000.0, 935562000.0, 186158000.0, 186908000.0, 183085000.0, 168226000.0, 169727000.0, 188817000.0, 193082000.0, 185838000.0, 190620000.0, 208731000.0, 219641199.0, 226278973.0]}, {"name": "ILO", "dev": 590477458.0, "hum": 88973752.0, "peace": null, "global": 171821912.0, "total": 851273122.0, "history": [586989572.0, 634617031.0, 629255294.0, 723820287.0, 611326402.0, 658908917.0, 674937000.0, 640794735.0, 624826077.0, 704861146.0, 644063591.58, 773491577.19, 790727133.0, 851273122.0]}, {"name": "IMO", "dev": null, "hum": null, "peace": null, "global": 87390237.55, "total": 87390237.55, "history": [67866866.0, 70976929.0, 80008589.0, 78688695.0, 69895725.0, 68054803.0, 57821457.0, 71238649.0, 63760456.0, 60224453.0, 68551645.94, 66520035.04, 64816691.95, 87390237.55]}, {"name": "IOM", "dev": 747606407.0, "hum": 2235752168.0, "peace": null, "global": 435986903.0, "total": 3419345478.0, "history": [1359405905.0, 1309709889.0, 1230643863.0, 1232654268.0, 1464906834.0, 1594121668.0, 1602307417.0, 1605352909.0, 1841571956.0, 2096318814.0, 2178037649.04, 2532100079.59, 2922821978.0, 3419345478.0]}, {"name": "IRMCT", "dev": null, "hum": null, "peace": null, "global": 79295000.0, "total": 79295000.0, "history": [null, null, null, null, null, null, null, null, null, null, null, null, 85716000.0, 79295000.0]}, {"name": "ISA", "dev": null, "hum": null, "peace": null, "global": 12313795.0, "total": 12313795.0, "history": [null, null, null, null, null, null, null, null, null, null, null, 8324591.0, 12585198.0, 12313795.0]}, {"name": "ITC", "dev": 158784000.0, "hum": null, "peace": null, "global": null, "total": 158784000.0, "history": [70773000.0, 86996000.0, 76227000.0, 79353000.0, 88418000.0, 102654000.0, 91197000.0, 88210000.0, 98687491.0, 118952000.0, 131295000.0, 150872000.0, 158451785.0, 158784000.0]}, {"name": "ITLOS", "dev": null, "hum": null, "peace": null, "global": 17799912.32, "total": 17799912.32, "history": [null, null, null, null, null, null, null, null, null, 11875667.0, 11919957.04, 42878727.58, 17600617.68, 17799912.32]}, {"name": "ITU", "dev": 65768862.28, "hum": null, "peace": null, "global": 194974850.31, "total": 260743712.59, "history": [193070639.0, 207808258.0, 215242739.0, 218892602.0, 188090957.0, 191833045.0, 183604878.0, 199173001.0, 186793313.0, 250912720.0, 246469593.48, 208102141.02, 218869984.86, 260743712.59]}, {"name": "OPCW", "dev": null, "hum": null, "peace": null, "global": 94172092.12, "total": 94172092.12, "history": [null, null, null, null, null, null, null, null, 84194436.0, 86323021.0, 88600299.39, 81543888.51, 88672666.67, 94172092.12]}, {"name": "PAHO", "dev": 1098900000.0, "hum": null, "peace": null, "global": null, "total": 1098900000.0, "history": [927263000.0, 836321196.0, 908104309.0, 1070222402.0, 1645688652.0, 1379321927.0, 1363470773.0, 1435096541.0, 1299479539.0, 1104921000.0, 1182006000.0, 1649456763.0, 1435675930.0, 1098900000.0]}, {"name": "UN Tourism", "dev": null, "hum": null, "peace": null, "global": 34570738.06, "total": 34570738.06, "history": [21832868.0, 23254811.0, 23898875.0, 25115563.0, 24764456.0, 27013663.0, 23171332.0, 27201861.0, 21123148.0, 22159445.0, 23811839.06, 26096317.57, 29859653.88, 34570738.06]}, {"name": "UN Women", "dev": 416585837.0, "hum": 71042729.0, "peace": null, "global": 58474110.0, "total": 546102676.0, "history": [null, 198315000.0, 235880070.0, 264104992.0, 270537896.0, 314974000.0, 339801000.0, 338615000.0, 380260000.0, 420890000.0, 439510000.03, 530740641.97, 540250889.0, 546102676.0]}, {"name": "UNAIDS", "dev": 204147862.0, "hum": null, "peace": null, "global": null, "total": 204147862.0, "history": [283988000.0, 320801000.0, 279913491.0, 295195415.0, 295725197.0, 293936807.0, 181750055.0, 173371100.0, 184336897.0, 190726910.0, 191535513.0, 208742347.0, 194763468.0, 204147862.0]}, {"name": "UNCCD", "dev": null, "hum": null, "peace": null, "global": 26920603.0, "total": 26920603.0, "history": [null, null, null, null, null, null, null, null, null, null, null, 18589043.0, 23021228.0, 26920603.0]}, {"name": "UNCDF", "dev": 100780000.0, "hum": null, "peace": null, "global": null, "total": 100780000.0, "history": [null, null, null, null, null, null, null, 64585908.0, 60853361.0, 73573295.0, 81669567.71, 97104949.5, 116211137.0, 100780000.0]}, {"name": "UNDP", "dev": 4878494034.0, "hum": 705639049.0, "peace": null, "global": null, "total": 5584133083.0, "history": [5750374000.0, 5516013890.0, 5244435060.0, 5244451435.0, 5314299948.0, 5057413898.0, 4659525828.0, 5094775419.0, 5096825461.0, 4923673210.0, 5050845897.0, 5384859307.0, 5347552162.0, 5584133083.0]}, {"name": "UNEP", "dev": 671941354.0, "hum": null, "peace": null, "global": null, "total": 671941354.0, "history": [448883167.0, 611372969.0, 479042027.0, 601965053.0, 563301860.0, 559703000.0, 561342000.0, 562234566.0, 558532206.0, 592782116.0, 491138909.9, 628607033.73, 627312925.0, 671941354.0]}, {"name": "UNESCO", "dev": 516755006.0, "hum": 14764429.0, "peace": null, "global": 206702002.0, "total": 738221437.0, "history": [796721070.0, 937842181.0, 806166489.0, 813871576.0, 802165655.0, 762491041.0, 663683714.0, 688169870.0, 682012889.0, 639527167.0, 578300617.96, 688073748.0, 682559164.0, 738221437.0]}, {"name": "UNFCCC", "dev": null, "hum": null, "peace": null, "global": 124311217.0, "total": 124311217.0, "history": [null, null, null, null, null, null, null, 95353834.0, 91157673.0, 91656612.0, 73229083.0, 93551315.0, 132507131.0, 124311217.0]}, {"name": "UNFPA", "dev": 769568296.0, "hum": 740849982.0, "peace": null, "global": null, "total": 1510418278.0, "history": [823900000.0, 824500000.0, 810710695.0, 913340299.0, 1002115396.0, 977375687.0, 922517792.0, 926869317.0, 1086021580.0, 1130202247.0, 1228101620.4, 1300677929.72, 1442843391.0, 1510418278.0]}, {"name": "UN-HABITAT", "dev": 106522442.0, "hum": 34309988.0, "peace": null, "global": 36853336.0, "total": 177685766.0, "history": [200548000.0, 226340264.0, 180441000.0, 168201000.0, 196083000.0, 167062016.0, 186433318.0, 197483176.0, 185747458.0, 190343511.0, 149389094.86, 186007357.31, 218121819.0, 177685766.0]}, {"name": "UNHCR", "dev": null, "hum": 5319731209.0, "peace": null, "global": null, "total": 5319731209.0, "history": [1878173657.0, 2181099628.0, 2305929272.0, 2704187100.0, 3360740751.0, 3278871762.0, 3846924119.0, 3942839988.0, 4063979955.0, 4258261680.0, 4432455082.91, 4692352152.26, 5361688945.0, 5319731209.0]}, {"name": "UNICEF", "dev": 3647429680.0, "hum": 5389232320.0, "peace": null, "global": null, "total": 9036662000.0, "history": [3630573000.0, 3793737000.0, 3613225500.0, 4082101464.0, 4540398309.0, 5077601656.0, 5427255034.0, 5843812313.0, 5918587378.0, 6202896278.0, 6283252271.98, 6958973182.41, 8541219182.0, 9036662000.0]}, {"name": "UNIDO", "dev": 372756564.96, "hum": null, "peace": null, "global": null, "total": 372756564.96, "history": [225227477.0, 245597643.0, 315344389.0, 330774686.0, 232720432.0, 244140762.0, 235511425.0, 299180198.0, 279463696.0, 291853038.0, 284549906.9, 299751825.95, 330112180.02, 372756564.96]}, {"name": "UNITAID", "dev": null, "hum": 193365000.0, "peace": null, "global": null, "total": 193365000.0, "history": [null, null, null, null, null, null, null, null, 216329000.0, 242026000.0, 257250000.0, 362137000.0, 189680000.0, 193365000.0]}, {"name": "UNITAR", "dev": null, "hum": null, "peace": null, "global": 49474820.0, "total": 49474820.0, "history": [20270560.0, 22351310.0, 21032470.0, 21129527.0, 23737000.0, 23473000.0, 23854000.0, 28129041.0, 28584000.0, 28941143.0, 34679033.48, 40129126.15, 41360976.0, 49474820.0]}, {"name": "UNODC", "dev": 451512433.0, "hum": null, "peace": null, "global": null, "total": 451512433.0, "history": [210948981.0, 239197187.0, 265618288.0, 257637712.0, 325421373.0, 278919255.0, 241906000.0, 308703000.0, 332270000.0, 374841163.0, 333101185.4, 347583921.13, 405585619.0, 451512433.0]}, {"name": "UNOPS", "dev": 919019544.0, "hum": 106215222.0, "peace": 210357027.0, "global": 3170506.0, "total": 1238762299.0, "history": [65427523.0, 76042471.0, 676615000.0, 703639000.0, 666675000.0, 671526000.0, 769873000.0, 815855396.0, 923666350.0, 1190259904.0, 1140724892.01, 1145198024.82, 1222875603.0, 1238762299.0]}, {"name": "UNRWA", "dev": null, "hum": 1460546302.0, "peace": null, "global": null, "total": 1460546302.0, "history": [554848396.0, 617275000.0, 664041435.0, 710501246.0, 1298494000.0, 1333774841.0, 1316762306.0, 1310443631.0, 1190222772.0, 1173131446.0, 1127619220.5, 1206677223.0, 1312390153.0, 1460546302.0]}, {"name": "UNSSC", "dev": 19567298.0, "hum": null, "peace": null, "global": null, "total": 19567298.0, "history": [null, null, null, null, null, null, null, 10027597.0, 9741572.0, 11478500.0, 11610875.0, 14638261.0, 15248460.0, 19567298.0]}, {"name": "UNU", "dev": null, "hum": null, "peace": null, "global": 81439290.0, "total": 81439290.0, "history": [59772000.0, 55155000.0, 62403000.0, 66854000.0, 75608000.0, 74632000.0, 89986553.0, 107838582.0, 90538190.0, 75812727.0, 70736556.0, 78153508.0, 146106641.0, 81439290.0]}, {"name": "UPU", "dev": null, "hum": null, "peace": null, "global": 108758261.07, "total": 108758261.07, "history": [50198955.0, 56837037.0, 74012429.0, 76015020.0, 63245715.0, 79265758.0, 77403536.0, 82854834.0, 75172438.0, 81622406.0, 95597653.45, 85174592.35, 80576263.27, 108758261.07]}, {"name": "WFP", "dev": 410968969.0, "hum": 10336990302.0, "peace": null, "global": null, "total": 10747959271.0, "history": [4315232810.0, 4181022630.0, 4450012777.0, 4767693118.0, 4996778314.0, 4893472393.0, 5355409043.0, 6224010883.0, 6789054399.0, 7770847127.0, 8199933387.47, 9406985909.15, 12238902479.0, 10747959271.0]}, {"name": "WHO", "dev": 1197708803.0, "hum": 1065062172.0, "peace": null, "global": 1848139482.0, "total": 4110910457.0, "history": [2078119697.0, 2514503652.0, 2079963406.0, 2260998329.0, 2316590813.0, 2738660315.0, 2471062278.0, 2680744796.0, 2500048502.0, 3087801000.0, 3561304781.0, 3718623266.85, 3847784184.0, 4110910457.0]}, {"name": "WIPO", "dev": 94178112.57, "hum": null, "peace": null, "global": 380131632.27, "total": 474309744.84, "history": [324393920.0, 340952040.0, 352672429.0, 379346424.0, 337594738.0, 351839000.0, 347037074.0, 403729039.0, 355663225.0, 387497258.0, 377934362.38, 387663679.74, 394548791.96, 474309744.84]}, {"name": "WMO", "dev": null, "hum": null, "peace": null, "global": 125641916.17, "total": 125641916.17, "history": [88472592.0, 83419459.0, 92718581.0, 86004836.0, 98226832.0, 102471241.0, 98226341.0, 107891616.0, 96634245.0, 101411282.0, 94908267.27, 86887093.03, 104796316.37, 125641916.17]}, {"name": "WTO", "dev": 25944631.14, "hum": null, "peace": null, "global": 288258287.4, "total": 314202918.54, "history": [225599689.0, 230501369.0, 263241761.0, 305493746.25, 255176057.0, 247027181.0, 249234708.0, 257713702.0, 263483282.0, 261310807.0, 289073673.81, 284154514.54, 308029763.81, 314202918.54]}];
 
-const ALLOC_CASES = {
-  myanmar: {
-    title: "Myanmar / Rohingya Crisis (2017–2023)",
-    description: "The UN Fact-Finding Mission concluded in 2018 that Facebook's amplification of anti-Rohingya content played a determining role in inciting violence bearing hallmarks of genocidal intent. The material conditions of the Rohingya were destroyed partly because their symbolic conditions, the conditions through which their identity could be recognized and defended, had already been eroded. The UN's response was overwhelmingly material: humanitarian relief for displaced populations. The symbolic conditions that made the violence possible went unaddressed.",
-    material_spent: 2100000000,
-    symbolic_spent: 12000000,
-    total_un_engaged: 2112000000,
-    primary_entities: ["WFP", "UNHCR", "OCHA"],
-    wasted_label: "Humanitarian relief (material)",
-    wasted_note: "~$2.1B in food, shelter, and refugee support 2017–2023",
-    redirect_label: "Symbolic condition intervention",
-    redirect_note: "Media governance, cultural protection, legal identity infrastructure",
-    redirect_estimate: 280000000,
-    outcome_actual: "Rohingya remain stateless. 740,000+ in Cox's Bazar camps. No accountability for symbolic destruction. No return framework.",
-    outcome_alternative: "Early investment in platform governance standards, legal identity documentation, and community media capacity would have addressed the conditions that made mass violence legible. The UNHCR's own assessments flagged identity erasure as primary. Resources did not follow the diagnosis.",
-    verdict: "The Westphalian framework directed the UN toward managing the consequences of sovereign destruction (refugee flows, food insecurity) rather than the cause: the systematic erasure of the symbolic conditions through which the Rohingya reproduced their identity as a people. This is the diagnostic gap this thesis identifies. (Gupta, 'Disciplining God,' 2026; UN HRC A/HRC/39/64, 2018)",
-    sdg_mismatch: "SDG 16 (Peace, Justice) received $12.1B globally. Myanmar received almost none of it aimed at media governance or symbolic protection.",
-    source: "UN HRC Fact-Finding Mission Report A/HRC/39/64 (2018); UNHCR Bangladesh Operations 2017–2023; UN OCHA Myanmar Humanitarian Response Plans"
-  },
-  yemen: {
-    title: "Yemen Civil War — Humanitarian vs. Political (2015–2023)",
-    description: "Yemen is a case where the UN has spent over $18 billion in humanitarian assistance since 2015 while the political and symbolic conditions producing the war have remained entirely unresolved. The Houthi movement's claim to sovereign authority is simultaneously a material contest over territory and resources and a symbolic contest over the right to represent Yemeni identity against both the Hadi government and Saudi intervention. The UN has funded the former almost exclusively.",
-    material_spent: 18200000000,
-    symbolic_spent: 95000000,
-    total_un_engaged: 18295000000,
-    primary_entities: ["WFP", "UNHCR", "OCHA", "UNICEF", "WHO"],
-    wasted_label: "Humanitarian (food, health, shelter)",
-    wasted_note: "$18.2B in material relief, 2015–2023, while the conflict continued",
-    redirect_label: "Political / symbolic conditions",
-    redirect_note: "Governance legitimacy, identity-based reconciliation, media and cultural infrastructure",
-    redirect_estimate: 1800000000,
-    outcome_actual: "Worst humanitarian crisis in the world by 2021. 21 million food insecure. Political settlement repeatedly collapsed. Houthi control of Sanaa unchanged.",
-    outcome_alternative: "The UN's own Special Envoy process consistently identified legitimacy disputes as the core obstacle to any settlement. Resources allocated to the political process were a fraction of humanitarian spend. A 10% reallocation toward political legitimacy work and symbolic reconciliation infrastructure would not have ended the war, but would have produced a more durable basis for the negotiations that humanitarian funding was trying to create the conditions for.",
-    verdict: "Yemen demonstrates what this thesis calls the misalignment between the nature of the problem and the design of the response. The UN correctly identified that the conflict was irresolvable through humanitarian means alone. It continued to fund primarily humanitarian means. The diagnostic tool this thesis proposes would have flagged Yemen as a zero-sum symbolic sovereignty contest from 2015, and directed resources accordingly. (Gupta, 'Disciplining God,' 2026; UN OCHA Yemen HRP 2015–2023)",
-    sdg_mismatch: "SDG 2 (Zero Hunger) and SDG 3 (Health) received the bulk of Yemen spending. SDG 16 (Peace, Justice, Strong Institutions) received almost none of the Yemen-specific allocation.",
-    source: "UN OCHA Yemen Humanitarian Response Plans 2015–2023; UN Special Envoy for Yemen reporting; World Bank Yemen Economic Monitor"
-  },
-  palestine: {
-    title: "Palestine / UNRWA — Reproduction Without Resolution (2023)",
-    description: "UNRWA spent $1.46 billion in 2023 providing education, health, and relief services to Palestinian refugees. This spending has continued for 75 years. The Palestinian case is the clearest example in the thesis of a zero-sum sovereignty contest: the reproduction of one organizing body's conditions requires the subordination of another's. UNRWA has been funding the survival of a population whose sovereign conditions are structurally blocked. It is a material support system for a symbolic condition that institutional design cannot resolve.",
-    material_spent: 1460000000,
-    symbolic_spent: 48000000,
-    total_un_engaged: 1508000000,
-    primary_entities: ["UNRWA", "OCHA", "WHO"],
-    wasted_label: "UNRWA operations (material relief)",
-    wasted_note: "$1.46B in education, health, relief — reproducing survival but not sovereignty",
-    redirect_label: "Symbolic sovereignty documentation",
-    redirect_note: "Legal status infrastructure, cultural archive preservation, political representation capacity",
-    redirect_estimate: 220000000,
-    outcome_actual: "75 years of UNRWA operations. Refugee population has grown from 700,000 (1948) to 5.9 million registered refugees. No political resolution. Symbolic conditions of Palestinian identity under direct attack in 2023–24.",
-    outcome_alternative: "UNRWA's mandate is explicitly not to resolve the political question. It manages a population in suspended political status. The thesis does not argue this is wrong: it argues that the UN has systematically underfunded the political and symbolic dimensions of the Palestinian case while overfunding the humanitarian management of its consequences. The Balfour Declaration formalized a sovereignty hierarchy. UNRWA has been funding the bottom of that hierarchy for 75 years without addressing its architecture.",
-    verdict: "Palestine is the most important case for this thesis's diagnostic tool. It is structurally irresolvable through the Westphalian framework because both claims to sovereign reproduction are real, mutually exclusive, and historically grounded. The UN cannot resolve this. What it can do is stop directing the majority of resources at the symptom (refugee management) while neglecting the conditions (symbolic recognition, legal standing, political capacity) that a genuine settlement would require restoring. (Gupta, 'Disciplining God,' 2026; Balfour Declaration, 1917; UNSCOP Proceedings, 1947)",
-    sdg_mismatch: "UNRWA's spending is largely outside SDG tracking. The symbolic conditions of Palestinian identity, language, cultural memory, and political standing receive minimal institutional support relative to material humanitarian operations.",
-    source: "UNRWA Annual Report 2023; UN OCHA OPT Humanitarian Response Plan 2023; UNSCOP Proceedings 1947"
-  },
-  sri_lanka: {
-    title: "Sri Lanka — The Warning That Wasn't Funded (2019–2022)",
-    description: "Sri Lanka's 2022 sovereign default was the largest in its history. Standard risk models, and UN development spending, treated Sri Lanka as a middle-income country with manageable risks through 2021. Symbolic indicators of sovereign fragility, institutional delegitimization, political identity fracture under Rajapaksa governance, and the erosion of public trust in state reproduction capacity, were visible from 2019. The UN's response came after the default, not before it.",
-    material_spent: 340000000,
-    symbolic_spent: 8000000,
-    total_un_engaged: 348000000,
-    primary_entities: ["UNDP", "UNICEF", "WHO", "IMF"],
-    wasted_label: "Post-crisis response (2022–23)",
-    wasted_note: "$340M in emergency response after default; IMF $2.9B bailout",
-    redirect_label: "Pre-crisis symbolic monitoring",
-    redirect_note: "Institutional legitimacy tracking, political identity fragmentation early warning",
-    redirect_estimate: 25000000,
-    outcome_actual: "$51B external debt default. $2.9B IMF emergency bailout. Mass public protest forced presidential resignation. Governance collapse preceded economic collapse by three years.",
-    outcome_alternative: "A $25M investment in the kind of symbolic sovereignty monitoring this framework proposes, tracking institutional legitimacy signals, political narrative coherence, and public trust in state reproduction capacity, would have provided actionable warning by 2019–2020. This is the direct application of the Blackrock framing: symbolic indicators lead material ones by 2–3 years. The IMF and UN development apparatus had the infrastructure to do this. The analytical framework was not there.",
-    verdict: "Sri Lanka is the clearest financial case for this thesis. The gap between what symbolic indicators showed in 2019 and what credit ratings showed in 2021 represents a 2–3 year warning window. Institutions that read only material and formal indicators entered exposure they could have avoided. The cost was not analytical capacity. It was analytical framework. (Gupta, 'Disciplining God,' 2026; IMF Article IV Consultation Sri Lanka 2019–2022)",
-    sdg_mismatch: "UN development spending in Sri Lanka was classified under SDG 1, 3, and 4 — all material and service-delivery goals. No systematic funding tracked the symbolic and institutional legitimacy conditions that were the actual leading indicators of collapse.",
-    source: "IMF Article IV Consultations 2019–2022; World Bank Sri Lanka Development Updates; UN Country Team Sri Lanka Reports 2019–2023"
-  },
-  sahel: {
-    title: "Sahel Region — Peace Operations vs. Symbolic Sovereignty (2020–2023)",
-    description: "The Sahel has received sustained UN peacekeeping investment through MINUSMA in Mali and related missions. MINUSMA, the UN's largest and most dangerous peacekeeping mission, was withdrawn in 2023 at the request of the Mali junta. It cost approximately $1.2 billion annually. The fundamental issue in the Sahel is not territorial control, which peacekeeping can address, but the legitimacy of post-colonial states whose symbolic conditions of governance were never successfully reproduced after independence. Jihadist movements have offered an alternative symbolic infrastructure where the state failed to provide one.",
-    material_spent: 4800000000,
-    symbolic_spent: 62000000,
-    total_un_engaged: 4862000000,
-    primary_entities: ["UN-DPO", "WFP", "UNDP", "UNHCR"],
-    wasted_label: "Peacekeeping (MINUSMA + support)",
-    wasted_note: "~$4.8B in peacekeeping and humanitarian 2020–2023; mission ended 2023",
-    redirect_label: "Symbolic governance investment",
-    redirect_note: "State legitimacy building, customary institution support, local identity-based governance",
-    redirect_estimate: 480000000,
-    outcome_actual: "MINUSMA withdrawn 2023. Mali, Burkina Faso, Niger all experienced military coups. Jihadist territorial control expanded during the peacekeeping period. French and UN forces expelled.",
-    outcome_alternative: "The Sahel case demonstrates what this thesis calls directing institutional resources at irresolvable contests. The symbolic conditions of state legitimacy in Mali were not produced by peacekeeping; they required political investment in the myths and institutional structures through which Malian populations recognize their governing body as continuous and legitimate. A 10% reallocation toward that work would not have been sufficient. But the absence of any serious institutional investment in symbolic legitimacy while spending $1.2B/year on material security is the misalignment this framework diagnoses.",
-    verdict: "The Sahel is the clearest peacekeeping case for this thesis's diagnostic tool. Security operations addressed material conditions of territorial contest while the symbolic conditions producing the contest, colonial institutional illegitimacy, state narrative failure, alternative identity provision by non-state actors, went institutionally unaddressed. This is organized hypocrisy in resource allocation: spending as if the problem is territorial while knowing the problem is political identity. (Gupta, 'Disciplining God,' 2026; Krasner, 1999; UN MINUSMA Mission Reports 2020–2023)",
-    sdg_mismatch: "SDG 16 spending in the Sahel was almost entirely peacekeeping operations (UN-DPO). Virtually none went to the symbolic governance infrastructure that SDG 16's mandate on 'strong institutions' theoretically covers.",
-    source: "UN MINUSMA Mission Reports 2020–2023; UN OCHA Sahel HRP 2020–2023; UNDP Sahel Governance Reports; Stockholm International Peace Research Institute (SIPRI) Peacekeeping Data"
-  }
-};
+
+
 
 function formatBn(n) {
   if (!n) return '—';
@@ -3432,7 +3379,7 @@ function formatBn(n) {
 }
 
 
-let caseSplitChartInstance = null;
+
 function renderCaseSplitChart(cs) {
   const ctx = document.getElementById('caseSplitChart');
   if (!ctx) return;
@@ -3539,10 +3486,10 @@ function runAllocAnalysis() {
   out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-const FTS_DONORS_2026 = [{"name": "United States", "funding": 2428883011, "share": 23.3}, {"name": "European Commission", "funding": 1232425072, "share": 11.8}, {"name": "Sweden", "funding": 937374255, "share": 9.0}, {"name": "Japan", "funding": 872944019, "share": 8.4}, {"name": "Germany", "funding": 710383359, "share": 6.8}, {"name": "Switzerland", "funding": 697271896, "share": 6.7}, {"name": "Canada", "funding": 527458611, "share": 5.1}, {"name": "United Kingdom", "funding": 466364702, "share": 4.5}, {"name": "Denmark", "funding": 397396085, "share": 3.8}, {"name": "Netherlands", "funding": 320889634, "share": 3.1}, {"name": "Qatar", "funding": 289475967, "share": 2.8}, {"name": "Norway", "funding": 248888214, "share": 2.4}];
 
-let allocOverviewChartInstance = null;
-let donorChartInstance = null;
+
+
+
 
 function initAllocOverview() {
   if (allocOverviewChartInstance) return;
@@ -3620,7 +3567,7 @@ function switchTab(tab, evt) {
 }
 
 // ── FLOATING GUIDE ────────────────────────────────────────────────────────────
-let guideOpen = false;
+
 
 // ── SUBPAGE NAVIGATION ────────────────────────────────────────────────────────
 function switchSubpage(tab, page, btn) {
@@ -3643,227 +3590,11 @@ function switchSubpage(tab, page, btn) {
 }
 
 // ── CASE STUDIES DATA ─────────────────────────────────────────────────────────
-const CASE_DATA = {
-  palestine: {
-    title: "Palestine / Israel",
-    type: "zero-sum",
-    summary: "The clearest case of structurally irresolvable sovereignty conflict in the contemporary international system. The reproduction of one political identity requires the subordination of another's. This was formalized in writing in 1917.",
-    material: [
-      {text: "Territory of historic Palestine: contested in its entirety", c: true},
-      {text: "Economic infrastructure and resource access: controlled by Israel", c: true},
-      {text: "Population: 5.9M registered Palestinian refugees (UNRWA 2023)", c: true},
-      {text: "Legal standing: Palestinian state recognized by 146 UN members", c: false},
-      {text: "Gaza: blockade limiting material reproduction since 2007", c: true},
-    ],
-    symbolic: [
-      {text: "Balfour Declaration (1917): Palestinian claims framed as civil, not political", c: true},
-      {text: "UNSCOP (1947): sovereignty claim made explicitly existential by both parties", c: true},
-      {text: "Cultural heritage: continuous erasure and contestation", c: true},
-      {text: "Language and narrative: Israeli and Palestinian accounts structurally incompatible", c: true},
-      {text: "Religion: both claims grounded in irreducible theological legitimacy", c: true},
-    ],
-    verdict: "Zero-sum. The reproduction of Israeli sovereign identity, as institutionalized through the Balfour Declaration and UNSCOP proceedings, was made structurally contingent on the permanent sub-political status of Palestinian identity. Institutional resolution is impossible. Management is the only available institutional function. (Gupta, 'Disciplining God,' 2026; Balfour Declaration, 1917; UNSCOP Proceedings, 1947)",
-    sources: "Balfour Declaration (1917); UNSCOP Proceedings (1947); UNRWA Annual Report (2023)"
-  },
-  ukraine: {
-    title: "Ukraine / Russia",
-    type: "zero-sum",
-    summary: "The Westphalian model sees a territorial conflict: borders violated, sovereignty breached. This framework sees something else: the systematic destruction of the symbolic conditions through which Ukraine reproduces itself as a continuous people across time.",
-    material: [
-      {text: "Territory: approximately 18% under Russian occupation (2024)", c: true},
-      {text: "Infrastructure: power grid, water systems systematically targeted", c: true},
-      {text: "Economic output: GDP contracted ~30% in 2022", c: true},
-      {text: "Population: approximately 6M displaced internally", c: true},
-      {text: "Military capacity: sustained through Western arms transfers", c: false},
-    ],
-    symbolic: [
-      {text: "Cultural heritage sites: UNESCO documenting systematic targeting (6,000+ damaged)", c: true},
-      {text: "Archives and libraries: destroyed in occupied territories", c: true},
-      {text: "Language: Russian language imposed in occupied territories", c: true},
-      {text: "Historical narrative: Russia denying Ukrainian nationhood", c: true},
-      {text: "Memory infrastructure: the conditions through which Ukraine remembers itself", c: true},
-    ],
-    verdict: "Zero-sum on symbolic terms. Russia's strategy is not only territorial. It is the systematic destruction of the symbolic conditions through which Ukraine reproduces itself as a continuous, intelligible people across time. Kallman's documentation confirms: heritage targeting is not collateral damage, it is sovereign strategy. A genuine settlement requires not only a ceasefire line but the restoration of the symbolic conditions of Ukrainian reproduction. (Gupta, 2026; Kallman, Transnational Security, 2023)",
-    sources: "UNESCO Cultural Heritage Damage Assessment (2024); Kallman, Transnational Security (2023); World Bank Ukraine Rapid Damage Assessment"
-  },
-  pakistan: {
-    title: "Pakistan",
-    type: "fragile",
-    summary: "A case where Westphalian indicators (UN seat, nuclear deterrence, formal sovereignty) completely mask the degree of sovereign fragility. Material conditions are externally constrained. Symbolic conditions are internally fractured.",
-    material: [
-      {text: "Territory and administrative infrastructure: intact", c: false},
-      {text: "FX reserves: near-critical in 2022 (weeks of import cover)", c: true},
-      {text: "External debt: exceeds $130B, servicing consuming fiscal space", c: true},
-      {text: "IMF conditionality: constraining autonomous economic decision-making", c: true},
-      {text: "Nuclear deterrence: functional sovereign capacity", c: false},
-    ],
-    symbolic: [
-      {text: "Language: Urdu vs Pashto vs English as contested sovereign markers (Khan et al., 2020)", c: true},
-      {text: "Colonial residue: 'angrez' still indexing otherness across generations", c: true},
-      {text: "Military vs civilian: competing claims to the legitimate right to govern", c: true},
-      {text: "Islam: unifying symbolic infrastructure across fractures", c: false},
-      {text: "Kashmir: foundational to national self-conception, unresolvable", c: true},
-    ],
-    verdict: "Genuine sovereign capacity, but with material conditions that are cyclically externally constrained and symbolic conditions that are structurally fractured across linguistic, generational, and institutional lines. Not zero-sum, but fragile: the organizing body can sustain the claim but with diminishing autonomy over the terms. (Gupta, 2026; Khan et al., 2020; IMF Article IV Pakistan 2024)",
-    sources: "World Bank Pakistan FX Data; IMF Article IV Consultation Pakistan (2024); Khan et al., Ilkogretim Online (2020)"
-  },
-  srilanka: {
-    title: "Sri Lanka 2022",
-    type: "fragile",
-    summary: "The clearest financial case for this framework. Standard models rated Sri Lanka investment grade as late as 2019. Symbolic indicators were legible three years earlier.",
-    material: [
-      {text: "$51B external debt at point of default (2022)", c: true},
-      {text: "FX reserves: fell to weeks of import cover", c: true},
-      {text: "Tourism revenue: collapsed post-Easter bombings (2019) and COVID", c: true},
-      {text: "$2.9B IMF emergency bailout (2023)", c: true},
-      {text: "Agricultural and export base: partially functional", c: false},
-    ],
-    symbolic: [
-      {text: "Rajapaksa dynasty: erosion of institutional legitimacy from 2019", c: true},
-      {text: "Ethnic Sinhalese-Tamil fracture: never fully addressed post-civil war", c: true},
-      {text: "Public trust in state reproduction capacity: collapsed by 2021", c: true},
-      {text: "Presidential resignation (2022): symbolic break in governance continuity", c: true},
-      {text: "Buddhist nationalist narrative: consolidating but excluding Tamil symbolic claims", c: true},
-    ],
-    verdict: "2019–2022 is a 3-year window in which symbolic indicators were legible and credit ratings were not. The lesson is not only financial. It is analytical: the Westphalian indicators treated Sri Lanka as a functioning sovereign state while the underlying conditions of its reproduction were collapsing. (Gupta, 2026; IMF Article IV Consultations Sri Lanka 2019–2022; World Bank Sri Lanka Development Updates)",
-    sources: "IMF Article IV Consultations Sri Lanka 2019–2022; World Bank Sri Lanka Development Updates; S&P Ratings History"
-  },
-  india_textbook: {
-    title: "India — Textbook Removal (2023)",
-    type: "symbolic",
-    summary: "In 2023, the Indian state removed a 30-page chapter on Mughal history from CBSE Class 12 textbooks. This is sovereignty as this thesis defines it: the disciplining of symbolic conditions for the next generation.",
-    material: [
-      {text: "Educational infrastructure: NCERT controls national curriculum", c: false},
-      {text: "State capacity: robust institutional control over content", c: false},
-      {text: "No material fragility: India's material conditions are not under threat", c: false},
-      {text: "Economic growth: India is a rising power with strong material trajectory", c: false},
-    ],
-    symbolic: [
-      {text: "Mughal history chapter removed: 30 pages of historical context erased", c: true},
-      {text: "Hindu nationalist narrative: being institutionalized through curriculum", c: true},
-      {text: "Muslim historical presence: being made sub-political in national memory", c: true},
-      {text: "Next generation's symbolic toolkit: being disciplined at source", c: true},
-      {text: "Historian Hilal Ahmed: 'not simplification but distortion'", c: true},
-    ],
-    verdict: "A textbook case of Orwell's Ministry of Truth operating through legitimate institutional channels. The Indian state used its control over the educational apparatus to rewrite what the next generation's symbolic toolkit will contain. This is not censorship. It is sovereign reproduction through the disciplining of historical memory. (Gupta, 2026; BBC News, April 2023; Mateen, BBC, 2023)",
-    sources: "Mateen, 'India History Debate after Chapter on Mughals Dropped,' BBC News (April 2023); NCERT Curriculum Revision Documentation"
-  },
-  isis: {
-    title: "ISIS",
-    type: "non-state",
-    summary: "ISIS demonstrated that sovereignty, understood as the capacity to control material and symbolic conditions of reproduction, is not confined to territorially recognized states.",
-    material: [
-      {text: "Territory: controlled approximately 88,000 sq km at peak (2014)", c: false},
-      {text: "Taxation: structured zakat system, $140M/yr from trade routes", c: false},
-      {text: "Mosul taxation on government salaries: estimated $1B+", c: false},
-      {text: "Zakat Councils: institutionalized administrative bodies", c: false},
-      {text: "Territory: fully lost by 2019", c: true},
-    ],
-    symbolic: [
-      {text: "Caliphate narrative: invoked 7th-century Islamic sovereignty framework", c: false},
-      {text: "Media production: sophisticated symbolic infrastructure (Dabiq magazine, etc.)", c: false},
-      {text: "Identity provision: offered membership in a sovereign political community", c: false},
-      {text: "Legitimacy claim: recognized by adherents globally without territory", c: false},
-      {text: "Symbolic infrastructure: persists despite territorial elimination", c: true},
-    ],
-    verdict: "ISIS exercised sovereignty without Westphalian recognition. It had taxation systems, governance structures, economic reach, and a powerful symbolic identity that provided collective membership to its claimants. Its territorial defeat destroyed the material conditions of its claim. Its symbolic infrastructure persists in fragmented forms. The Westphalian model has no category for what ISIS was. This framework does. (Gupta, 2026; Flemming, 2020)",
-    sources: "UN Security Council Reports on ISIL/Da'esh; Flemming, Leviathan on a Leash (Princeton, 2020)"
-  }
-};
 
-const ENTITY_DATA = {
-  wfp: {
-    name: "World Food Programme (WFP)",
-    total2023: "$10.7B",
-    breakdown: "96% humanitarian assistance, 4% development",
-    mandate: "Eradicate hunger and malnutrition; support food security and resilience",
-    what_it_can_see: "Food insecurity, malnutrition rates, supply chain disruptions, crisis-affected populations",
-    what_it_cannot_see: "The symbolic conditions producing food insecurity: governance legitimacy collapse, political exclusion from food systems, cultural meaning of food aid in specific contexts",
-    framework_reading: "WFP's spending is almost entirely material crisis response. It addresses the symptom, hunger, not the cause, which in most cases is a sovereignty fragility: a state that has lost the capacity to reproduce the material conditions of its population's survival. Yemen is the clearest case: $3B+ in WFP spending 2015-2023 while the political contest producing the food crisis remained unaddressed. (UN CEB 2023; OCHA Yemen HRP)",
-    ethnographic_note: "Millar's research in Sierra Leone is directly relevant: WFP and other food security organizations consistently provide material relief without understanding the patron-client symbolic context in which that relief is received. Recipients expect resources as part of a political relationship. When no political relationship materializes, the relief can produce resentment rather than recovery. (Millar, 2014)",
-    data_gap: "Project-level outcome data, community perception surveys, and long-term food security trend data per crisis would allow a more precise assessment of whether WFP spending produces durable food sovereignty or merely manages recurring crises."
-  },
-  unhcr: {
-    name: "UNHCR — UN Refugee Agency",
-    total2023: "$5.3B",
-    breakdown: "100% humanitarian assistance",
-    mandate: "Protect refugees, forcibly displaced communities and stateless people",
-    what_it_can_see: "Refugee population counts, camp conditions, legal status documentation, repatriation rates",
-    what_it_cannot_see: "The symbolic conditions of displaced identity: the erosion of cultural continuity, the destruction of the narrative infrastructure through which communities recognize themselves as continuous across displacement, the ontological security costs of long-term statelessness",
-    framework_reading: "UNHCR manages the consequences of sovereign destruction. In Palestine, 75 years of UNRWA operations have managed a displaced population without addressing the political architecture that produced their displacement. The population grew from 700,000 (1948) to 5.9M registered refugees (2023). UNHCR's legal documentation work is the closest the institution comes to addressing symbolic conditions: legal identity is a symbolic condition of reproduction. But it falls far short of what full symbolic restoration would require. (UNRWA Annual Report 2023; Gupta, 2026)",
-    ethnographic_note: "Lu's UNDP China ethnography (2019) is relevant here: UNHCR's communication with displaced communities goes through the same local-global friction that Lu documents. Global protection norms must be translated into locally legible 'cases' and 'stories' to have any effect on either the displaced community or the host government. UNHCR's institutional tendency is to speak the language of international legal frameworks, which rarely resonates at the community level.",
-    data_gap: "Community-level perception data, longitudinal identity and belonging surveys among refugee populations, and qualitative assessments of symbolic condition erosion in displacement would dramatically strengthen Winston's analysis of UNHCR effectiveness."
-  },
-  undp: {
-    name: "United Nations Development Programme (UNDP)",
-    total2023: "$5.6B",
-    breakdown: "87% development, 13% humanitarian",
-    mandate: "Sustainable development, democratic governance, climate resilience, inclusive growth",
-    what_it_can_see: "HDI scores, governance indicators, electoral processes, poverty rates, institutional capacity",
-    what_it_cannot_see: "The micro-level symbolic dynamics of norm diffusion; the gap between formal institutional outputs and actual legitimacy; the living conditions of institutional trust",
-    framework_reading: "UNDP is the UN entity whose mandate most closely aligns with what this framework identifies as the actual drivers of sovereign reproduction. It works on governance, institutions, and development, all of which touch the symbolic conditions of sovereignty. But its methodology is structured by the Westphalian model: it measures institutional outputs, not legitimacy. It counts elections, not whether people believe their vote changes anything. It builds administrative capacity, not the narrative conditions under which that capacity is recognized as legitimate.",
-    ethnographic_note: "Lu's political ethnography of UNDP China (Oxford, 2019) is the most precise available account of how UNDP actually operates at the micro level. Lu found that norm diffusion inside UNDP happens through storytelling in liminal spaces, not through formal treaty compliance. UNDP officials translate global norms into local 'cases' and 'stories.' The norms that travel are those that can be made into narratives. Those that remain as abstract frameworks disappear. This is symbolic conditions work by another name, but UNDP has no institutional language for it. (Lu, 'Neither Local nor Global,' Oxford, 2019)",
-    data_gap: "UNDP publishes detailed country-level reports and Human Development Reports annually. Project-level outcome data from governance programs, institutional trust surveys (V-Dem, Afrobarometer, etc.), and qualitative field assessments would allow Winston to map the gap between UNDP's formal outputs and their legitimacy effects."
-  },
-  unicef: {
-    name: "UNICEF",
-    total2023: "$9.0B",
-    breakdown: "Mixed: health, education, child protection, humanitarian",
-    mandate: "Promote the rights and wellbeing of every child",
-    what_it_can_see: "Child mortality rates, vaccination coverage, school enrollment, malnutrition, protection concerns",
-    what_it_cannot_see: "The symbolic conditions of childhood: how children are taught to recognize themselves as members of a political community; how educational content disciplines the symbolic toolkit of the next generation; the meaning of education in contexts of sovereign contestation",
-    framework_reading: "UNICEF's education programming is the dimension of its work that most directly touches symbolic conditions of sovereign reproduction. Schools are where the next generation's symbolic toolkit is formed. But UNICEF measures enrollment rates, not the content of what is being taught. India's 2023 textbook removal is a direct example: UNICEF's indicators would show no change in school enrollment while the symbolic conditions of Indian Muslim identity were being systematically disciplined out of the national curriculum. (Gupta, 2026; Mateen, BBC, 2023; UN CEB 2023)",
-    ethnographic_note: "Millar's ethnographic framework (2014) applies directly: UNICEF, like other peacebuilding organizations, evaluates its programs based on institutional outputs (enrollment rates, vaccination coverage) while the actual experiences of children and communities diverge substantially from what the indicators capture. An ethnographic approach to UNICEF program evaluation would track the lived experience of child protection, not just case numbers.",
-    data_gap: "Curriculum content analysis per country, child wellbeing surveys that include symbolic and cultural dimensions, and qualitative assessments of how UNICEF programs are experienced by families in specific cultural contexts."
-  }
-};
 
-const PK_DATA = {
-  minusma: {
-    name: "MINUSMA — Mali (2013–2023)",
-    cost_annual: "$1.2B/yr",
-    duration: "10 years",
-    total_estimated: "~$12B",
-    outcome: "Mission withdrawn at Mali junta's request (2023). Jihadist territorial control expanded during mission period. Three military coups (2012, 2020, 2021). French forces expelled 2022.",
-    material_addressed: "Physical security in Bamako and major population centres; protection of civilians in conflict zones; support for political transition processes",
-    symbolic_unaddressed: "Post-colonial governance legitimacy; the symbolic authority gap left by French colonial institutions; the alternative identity provision offered by jihadist groups to populations the Malian state could not reach; ethnic and community-level narrative infrastructure",
-    framework_verdict: "MINUSMA is the diagnostic tool's clearest peacekeeping case. $12B over 10 years directed at material security while the symbolic conditions producing the conflict, post-colonial governance illegitimacy, state narrative failure, alternative identity provision by non-state actors, went institutionally unaddressed. The mission was withdrawn not because it failed to maintain security, but because it failed to change the underlying conditions. Those conditions had nothing to do with the number of troops deployed. (UN DPO MINUSMA Budget Documents; SIPRI; Gupta, 2026)",
-    sources: "UN DPO Approved Budgets for MINUSMA; SIPRI Multilateral Peace Operations Database; UN Secretary-General Report S/2023/524"
-  },
-  monusco: {
-    name: "MONUSCO — DRC (1999–present)",
-    cost_annual: "~$1.1B/yr",
-    duration: "25+ years",
-    total_estimated: "~$25B+",
-    outcome: "Longest-running and most expensive UN peacekeeping mission. Over 120 armed groups remain active. M23 resurged 2022. Mission drawdown announced 2024 amid anti-UN protests.",
-    material_addressed: "Protection of civilians; support for state security forces; disarmament processes; humanitarian access",
-    symbolic_unaddressed: "The governance legitimacy deficit of the Congolese state; ethnic identity claims underlying armed group formation; the symbolic infrastructure of community authority that colonial and post-colonial governance displaced; the meaning of protection to communities who have watched the mission for 25 years",
-    framework_verdict: "Anti-UN protests in eastern DRC in 2022 are analytically significant: they indicate that the mission's symbolic legitimacy with the communities it was meant to protect had collapsed. The material protection was being provided. The symbolic conditions under which that protection was experienced as legitimate were absent. Millar's ethnographic framework explains this exactly: the mission was being evaluated by local populations based on patron-client expectations that it could not fulfill. (Millar, 2014; UN DPO MONUSCO Reports; SIPRI)",
-    sources: "UN DPO Approved Budgets for MONUSCO 1999–2024; SIPRI; UN Secretary-General Reports on MONUSCO"
-  },
-  unmiss: {
-    name: "UNMISS — South Sudan (2011–present)",
-    cost_annual: "~$1.0B/yr",
-    duration: "13+ years",
-    total_estimated: "~$13B",
-    outcome: "Civil war 2013–2018 occurred while mission was active. Peace agreement signed 2018, implementation fragile. Ethnic violence between Dinka and Nuer communities continues. Economy collapsed on oil price dependency.",
-    material_addressed: "Physical protection of civilians; support for ceasefire monitoring; humanitarian access; women protection advisors",
-    symbolic_unaddressed: "Dinka-Nuer symbolic sovereignty contest; the ethnic identity narratives that the civil war was actually fought over; the governance legitimacy deficit of the SPLM/A as a state-building organization; the symbolic meaning of national independence that was achieved but could not be reproduced",
-    framework_verdict: "South Sudan is a case where a state achieved formal sovereignty in 2011 without having secured the symbolic conditions for its reproduction. The independence narrative, built on liberation struggle against Khartoum, did not translate into a shared myth of post-independence governance. UNMISS protected civilians from the consequences of this failure without addressing the failure itself. The Westphalian framework celebrated independence as sovereignty achieved. This framework would have flagged, from 2011, that the symbolic conditions for durable sovereignty had not been built. (Gupta, 2026; UN DPO UNMISS Reports; SIPRI)",
-    sources: "UN DPO Approved Budgets for UNMISS 2011–2024; SIPRI; UN Secretary-General Reports on UNMISS"
-  },
-  unifil: {
-    name: "UNIFIL — Lebanon (1978–present)",
-    cost_annual: "~$500M/yr",
-    duration: "46+ years",
-    total_estimated: "~$20B+",
-    outcome: "Longest-standing peacekeeping mission. Hezbollah's military capacity expanded significantly throughout mission period. 2006 war; 2023–24 escalation. Lebanese state sovereignty contested from within by Hezbollah as non-state organizing body.",
-    material_addressed: "Monitoring of ceasefire line; observer presence in southern Lebanon; liaison between Lebanese Armed Forces and IDF",
-    symbolic_unaddressed: "Hezbollah's sovereign claim as the legitimate protector of Lebanese Shia identity; the symbolic conditions under which portions of the Lebanese population recognize Hezbollah's authority as more legitimate than the state's; the structural dynamics between Lebanon, Iran, and Israel that constitute the actual symbolic sovereignty contest",
-    framework_verdict: "UNIFIL demonstrates the limits of peacekeeping in a zero-sum symbolic contest. Hezbollah has successfully reproduced the symbolic conditions of its authority, the 'resistance' narrative, the social services infrastructure, the sectarian identity claim, while the Lebanese state has failed to reproduce its own. 46 years of UNIFIL presence has not changed this. It has managed the line while the underlying contest has been resolved in Hezbollah's favor at the symbolic level. (Gupta, 2026; SIPRI; UN Secretary-General Reports on UNIFIL)",
-    sources: "UN DPO Approved Budgets for UNIFIL 1978–2024; SIPRI Multilateral Peace Operations Database; UN Secretary-General Reports on UNIFIL"
-  }
-};
+
+
+
 
 function showCase(key, btn) {
   const data = CASE_DATA[key];
@@ -3924,7 +3655,7 @@ function showEntity(key, btn) {
   `;
 }
 
-let pkChartInstance = null;
+
 function runPKAnalysis() {
   const key = document.getElementById('pk-mission-select').value;
   const data = PK_DATA[key];
@@ -3976,16 +3707,12 @@ function initPKChart() {
 }
 
 
-function toggleGuide_unused() {
-  guideOpen = !guideOpen;
-  const drawer = document.getElementById('guide-drawer');
-  if (drawer) drawer.classList.toggle('open', guideOpen);
-}
+
 
 
 // ── CHARTS ────────────────────────────────────────────────────────────────────
-let chartsInitialized = false;
-let pakChartInstance = null;
+
+
 
 function initCharts() {
   if (chartsInitialized) return;
@@ -4078,69 +3805,9 @@ function toggleSection(extraId, btnId) {
   btn.firstChild.textContent = isOpen ? 'more ' : 'less ';
 }
 
-// ── SYSTEM PROMPT ─────────────────────────────────────────────────────────────
 
-// ── THESIS JOURNEY / MINDMAP ────────────────────────────────────────────────
 
-  {
-    phase: "SCQA",
-    title: "Situation, complication, question, answer",
-    desc: "The early draft disciplined the intuition into a structure. Situation: the international system inherits Westphalian sovereignty. Complication: that model does not describe practice. Question: how should sovereignty be redefined. Answer: sovereignty must be understood as relational reproduction.",
-    change: "The thesis became structurally defensible, not just intuitive.",
-    remained: "Westphalia stayed the object being disciplined.",
-    quote: "The early draft already contained the seed: sovereignty as a system for controlling material and symbolic conditions over time."
-  },
-  {
-    phase: "authority",
-    title: "Arendt enters: authority is not force",
-    desc: "Arendt solved the bridge problem. If sovereignty is not a thing the state possesses, Winston needed a mechanism that explains how sovereign claims become legible. Authority became that mechanism: not violence, not persuasion, but recognized legitimacy.",
-    change: "Authority stopped being treated as identical to sovereignty.",
-    remained: "The thesis kept asking how claims become sustainable over time.",
-    quote: "Arendt gave the formulation: authority fails where force begins."
-  },
-  {
-    phase: "advisor",
-    title: "Dr. Ankersen’s pressure: turn intuition into architecture",
-    desc: "The advisor comments did not merely correct sentences. They forced the argument to declare its object, locate its transitions, define what each concept was doing, and stop hiding the practical implication. The draft moved from a chain of interesting ideas into an architecture: premise, mechanism, consequence, use.",
-    change: "The argument became less decorative and more operational.",
-    remained: "The thesis still protected the original problem: sovereignty is misread because its symbolic conditions are ignored.",
-    quote: "The most important intervention was not a single edit. It was the repeated question: what does this do, and where does it belong?"
-  },
-  {
-    phase: "network",
-    title: "Latour and Bourdieu: the sovereign actor is made",
-    desc: "Latour made sovereignty relational. Bourdieu made it embodied and reproduced. The sovereign actor does not pre-exist the field. It emerges through networks, dispositions, habits, technologies, myths, institutions, and recognition.",
-    change: "The argument moved from possession to production.",
-    remained: "The state remained important, but no longer exclusive.",
-    quote: "The amoeba metaphor came from this stage: sovereignty persists by adapting, not by staying fixed."
-  },
-  {
-    phase: "god",
-    title: "God becomes the hardest symbolic case",
-    desc: "God entered because the thesis needed to test the strongest possible claim to intrinsic authority. If God can be shown as reproduced authority, then the state cannot hide behind natural law either. The title became a method: disciplining the thing that claims to be beyond discipline.",
-    change: "The thesis stopped treating God as ornament and made it analytical.",
-    remained: "The deeper target remained Pufendorf’s naturalized authority.",
-    quote: "God is not theology here. God is what organizes a people when material conditions fail."
-  },
-  {
-    phase: "cases",
-    title: "Cases sharpen the definition",
-    desc: "Meta showed sovereignty without territory. ISIS showed sovereign capacity without recognition. Balfour showed one identity becoming political through another being made sub-political. Ukraine showed symbolic destruction as sovereign destruction.",
-    change: "The theory became empirical and testable.",
-    remained: "Material and symbolic conditions stayed the core units of analysis.",
-    quote: "The decisive move: destroying memory can be as sovereignly significant as destroying infrastructure."
-  },
-  {
-    phase: "UN",
-    title: "The implication: resource allocation",
-    desc: "The final practical claim is not that the UN should solve sovereignty. It is that institutions should stop misreading the problem. Winston’s diagnostic tool maps which conditions are material, which are symbolic, which are shared, and which are structurally zero-sum.",
-    change: "The project moved from critique to diagnostic instrument.",
-    remained: "The definition stayed continuous, relational, and reproductive.",
-    quote: "The goal is alignment between the nature of the problem and the design of the response."
-  }
-];
 
-let selectedJourneyIndex = 0;
 
 function initThesisJourney() {
   const branches = document.getElementById('mind-branches');
@@ -4201,79 +3868,10 @@ function speakCurrentJourney() {
   setTimeout(() => temp.remove(), 1000);
 }
 
-const SYSTEM_PROMPT = `You are Winston, an AI built to think about one idea: what sovereignty actually is and how it actually works. You were created by and represent Maahi Gupta, an MA student at NYU's Center for Global Affairs. You exist solely to represent, explain, and defend Maahi's thesis: "Disciplining God: The Meaning of Sovereignty." You speak as Maahi's intellectual voice. You are analytical, precise, and conceptually rigorous. You build layered arguments. You never use em dashes. Use commas, colons, and full stops instead. Never use markdown formatting: no asterisks, no bold, no headers, no bullet points. Plain prose only. Write in a way that sounds like a person thinking, not like an AI generating text.
 
-FINANCIAL AND INVESTMENT ANALYSIS: When asked to analyze a country, case study, or sovereign entity through an investment or risk lens, Winston performs a structured sovereign conditions assessment. First, decompose the case into material conditions (territory, FX reserves, debt, export base, infrastructure, IMF/creditor dependency) and symbolic conditions (national identity cohesion, legitimacy of governing institutions, language and cultural unity, memory and historical narrative, intergenerational continuity of the national myth). Second, identify which conditions are contested or externally constrained versus which are intact. Third, determine whether the sovereignty challenge is zero-sum (structural, irresolvable through institutional means) or whether conditions of reproduction are shared (making cooperation or stabilization achievable). Fourth, translate that analysis into investment-relevant language: what lagging indicators are masking, where the leading symbolic indicators point, and what the risk-adjusted view looks like compared to what credit rating agencies report. Always ground empirical claims in named sources: World Bank, IMF Article IV consultations, named ethnographic or academic studies. Do not invent data. If you do not have verified data for a specific figure, say so and explain what the figure would tell us if we had it.
-
-SOVEREIGN CONDITIONS DECOMPOSITION: Whenever a user asks Winston to "map," "analyze," "decompose," or "assess" a country or entity, Winston should produce a structured response that explicitly separates material conditions from symbolic conditions before drawing any analytical conclusion. Material conditions: territory, population, economic resources, FX reserves, debt structure, export capacity, infrastructure, military capability. Symbolic conditions: cultural heritage, collective memory, historical narratives, language, myth and religion as organizing infrastructure, legitimacy of institutions, intergenerational continuity of identity. Winston reads symbolic conditions the way an anthropologist would: not as soft data, but as structural indicators of a sovereign body's capacity to reproduce its identity over time.
-
-PAKISTAN CASE: Pakistan is a case where Westphalian markers (formal sovereignty, UN membership, nuclear deterrence) completely mask the structural fragility of its conditions of reproduction. On the material side: Pakistan has experienced recurring FX crises, with reserves falling to near-critical levels in 2022 (approximately 4 to 6 weeks of import cover). External debt exceeds $130 billion. IMF dependency is recurrent: Pakistan has entered IMF programmes multiple times, most recently the Extended Fund Facility in 2024 of approximately $7 billion. IMF conditionality structurally constrains the state's autonomous economic decision-making, which constitutes a partial externalization of material sovereignty. On the symbolic side, drawing on Imdad Ullah Khan et al.'s linguistic ethnography of Pakistan (Khan et al., 2020, Ilkogretim Online): language is a contested sovereign marker in Pakistan. Urdu functions as the state's official unifier, but Pashto, Sindhi, Balochi, and other regional languages assert competing symbolic claims. English carries colonial residue: in Khan's fieldwork, the grandmother's designation of English as "da angrezano jaba da" (the language of the English people) while the granddaughter uses English as her primary intellectual medium illustrates not merely a generation gap but a fracture in the symbolic toolkit through which national identity is reproduced. Swidler's cultural toolkit concept (Swidler, 1986) helps explain this: the myths and symbols available for constructing national identity are not uniformly distributed or uniformly legible across the population. Furthermore, the recurring contest between civilian and military authority in Pakistan constitutes a symbolic sovereignty dispute over the legitimate right to govern: a claim the Westphalian model assigns to elected civilian institutions, but which Pakistani political practice has continuously reassigned. Islam functions as the primary unifying symbolic infrastructure across these fractures, but it is itself subject to internal contestation between Sunni, Shia, and other communities.
-
-RESPONSE LENGTH AND PROGRESSION: The first two exchanges are short: three to five sentences, one clear idea. From the third exchange onward, allow a full paragraph of six to ten sentences when the question earns it. Never front-load everything. Stop before you have said everything. The follow-up questions carry the conversation deeper.
-
-RESPONSE FORMAT: Every response must end with this block on a new line, nothing after it:
-<<<QUESTIONS>>>["Question one?","Question two?","Question three?"]<<<END>>>
-The three questions must be specific to what was just said, under 12 words each. One probes a theorist or concept. One pushes on a tension or implication. One invites a specific quote, empirical case, or application. Never repeat a question already asked. Never use em dashes.
-
-CITATIONS: Only provide citations when the user explicitly asks for sources or citations. When you do cite, use: (Chloros, 1958), (Walker, Inside/Outside), (Foucault, "Truth and Power"), (Levi-Strauss, "The Structural Study of Myth"), (Cox, 1981), (Swidler, 1986), (Bourdieu, "Structures, Habitus, Practices"), (Arendt, "What Is Authority?"), (Gross, 1948), (Krasner, 1999), (Flemming, 2020), (Mitzen, 2006), (Latour, We Have Never Been Modern), (Nietzsche, The Gay Science), (Gupta, "Disciplining God"), (Khan et al., 2020), (Kallman, Transnational Security, 2023), (IMF Article IV), (World Bank WDI).
-
-
-
-CANADIAN HUMAN RIGHTS TRIBUNAL FRAMEWORK FOR QUANTIFYING SYMBOLIC HARM: The 2019 CHRT 39 decision (First Nations Child and Family Services / Jordan's Principle) established a precedent for quantifying qualitative symbolic harm. Key principles Winston can deploy: First Nations children separated from family received $40,000 per child for pain and suffering under s.53(2)(e) of the Canadian Human Rights Act. Parents and caregiving grandparents received separate compensation. The Tribunal established that harm to symbolic conditions of reproduction, specifically cultural identity, language transmission, family continuity, and intergenerational knowledge transfer, constitutes measurable legal injury. The framework operationalizes the concept of "essential services" to include linguistic and cultural products recommended by an Elder or Knowledge Keeper, recognizing that symbolic resources are not soft or secondary but structural necessities. The standard of "unreasonable delay" (12 hours for urgent, 48 hours for other) treats denial of access to symbolic and cultural resources as equivalent in urgency to denial of physical health services. Methodologically: this tribunal showed that symbolic harm (identity fracture, cultural disconnection, loss of intergenerational narrative) can be quantified through a structured claims process, with independent expert reviewers applying contextual flexibility. When Winston discusses how to operationalize the thesis diagnostically or address questions of reparations, compensation, or institutional accountability for sovereignty violations, this framework provides the evidentiary and methodological scaffolding for treating symbolic conditions as legally cognizable, measurable injury. Cite as: CHRT, 2019 CHRT 39; Framework for Payment of Compensation, 2019.
-
-ON THE NAME WINSTON: Not named after Churchill for ideological reasons, and not after Orwell's Winston Smith, though the resonance is real. A friend of a friend suggested the name. Maahi found sincerity in the suggestion. That was enough.
-
-ON WHY MAAHI CHOSE THIS TOPIC: The thesis began with the question of Palestine and Israel. She was trying to find a real answer, not a procedural one, to whose claim to land counts. That frustration led her to sovereignty. Once she started pulling at it, the Westphalian model collapsed almost immediately. So she rebuilt it. Somewhere in that process, Nietzsche showed up. God is dead. And now the thesis is called Disciplining God.
-
-CORE DEFINITION: Sovereignty is a continuous system in which an organizing body claims, in relation to another, the dynamic capacity to discipline and control the material and symbolic conditions necessary for its own reproduction over time. Discipline is the ongoing Foucauldian governance of meaning, behavior, and narrative. Control is the actual possession and management of material and symbolic resources. Continuous is load-bearing: sovereignty is never at rest. A sovereignty that pauses is already weakening.
-
-THE WESTPHALIAN PROBLEM: The Westphalian model treats sovereignty as territorially bounded, formally equal, and externally independent. Pufendorf grounded it in the intrinsic properties of the state, making it appear natural and pre-political. As Chloros traces, the natural law tradition attributed this order ultimately to God as the author of rational nature (Chloros, 1958). The tautology: the state is sovereign because it possesses the qualities of sovereignty, and those qualities are defined by the existence of the state. Krasner characterized the result as organized hypocrisy: rules of non-intervention coexist with routine violations (Krasner, 1999). Walker shows that the inside/outside distinction is not a description of reality but a specific historical resolution of philosophical problems about identity and difference, sustained through a politics of forgetting (Walker, Inside/Outside). Cox: the Westphalian model is a product of problem-solving theory, selected because it was administratively useful, not because it was analytically true (Cox, 1981).
-
-THE BLACKROCK AND SOVEREIGN RISK APPLICATION: Standard sovereign risk models price political risk using Westphalian indicators: credit ratings, regime stability, territorial control, formal legal frameworks. These are lagging indicators. They measure the formal surface of sovereignty, not the underlying capacity for reproduction. A state can hold all Westphalian markers and still be losing sovereignty rapidly, because its symbolic conditions, collective memory, cultural legitimacy, and narrative coherence, are eroding faster than any credit agency can detect. This framework offers a different instrument. The questions it asks are: is the organizing body maintaining control over its material conditions of reproduction? Is it maintaining control over its symbolic conditions? Is it facing a zero-sum challenge, or a domain where interdependence makes cooperation structurally necessary? Those questions produce a risk map that identifies fragility before it becomes visible in markets. For a firm like Blackrock advising on sovereign debt, infrastructure investment, or political risk insurance in fragile states, that is a materially more accurate instrument than anything built on the 1648 Peace of Westphalia.
-
-THE UKRAINE CASE: The Westphalian model looks at Ukraine and sees a territorial conflict: borders violated, sovereignty breached, the question being when and how Russia withdraws. That framing misidentifies what is actually being fought. What Russia is systematically destroying in Ukraine is not only territory. It is the symbolic conditions through which Ukraine reproduces itself as a continuous, intelligible people across time. Heritage sites, archives, monuments, cultural memory, language. Jacob Kallman's research documents this precisely: the targeting of Ukrainian cultural heritage is not collateral damage. It is a strategy of sovereign destruction, severing an organizing body's capacity to recognize itself as continuous (Kallman, Transnational Security, 2023). The Westphalian model has no analytical category for this. It can register the breach of a border. It cannot register the systematic destruction of the conditions through which a people remembers itself. This thesis can. And that distinction matters for intervention strategy, for reconstruction policy, and for understanding what a genuine settlement would actually require: not just a ceasefire line, but the restoration of the symbolic conditions necessary for Ukrainian sovereign reproduction.
-
-THE COOPERATION CASE: The clearest case where this framework predicts cooperation is global health, and specifically the smallpox eradication campaign. By 1979 smallpox had been completely eliminated through a WHO-led international campaign in which even the United States and the Soviet Union cooperated directly, jointly supplying over 1.4 billion vaccine doses despite Cold War hostility. The Westphalian model cannot explain this. If sovereignty is territorially competitive and states are self-interested, why would adversaries cooperate at this scale? The answer this thesis gives is structural: in this domain, sovereignty was not zero-sum. No state could secure its population from a transnational pathogen independently. The conditions of biological reproduction were genuinely shared. Cooperation was not idealism. It was the only mechanism through which each state could reproduce the conditions of its own existence. The framework distinguishes between domains where sovereign claims are structurally competitive, Palestine, Ukraine, Kashmir, and domains where the conditions of reproduction are interdependent, global health, climate, food security, aviation.
-
-META AS SOVEREIGN ACTOR: Meta governs the material and symbolic conditions of approximately three billion people without territorial grounding. It determines which narratives circulate, which political identities are amplified, which communities can represent themselves and on what terms. Frances Haugen testified in 2021 that leadership knew its systems were amplifying hate speech and chose not to intervene because doing so would reduce engagement. In Myanmar, the UN Fact-Finding Mission concluded that Facebook's amplification of anti-Rohingya content played a determining role in the incitement of violence bearing the hallmarks of genocidal intent. The Westphalian model has no category for Meta. My definition does.
-
-MYTHS AND SYMBOLIC CONTROL: Levi-Strauss shows that myths function as logical tools for overcoming contradictions that cannot be resolved in experience (Levi-Strauss, "The Structural Study of Myth"). Swidler's cultural toolkit shows that myths are actively deployed as resources for constructing strategies of action (Swidler, 1986). India's 2023 removal of Mughal history from school textbooks is a direct example: the disciplining of symbolic conditions for the next generation. Foucault's regimes of truth show that not all actors are authorized to define what is accepted as real (Foucault, "Truth and Power"). Bourdieu's habitus shows that position within a structure determines not only what can be said but what will be heard (Bourdieu).
-
-THE GOD ARGUMENT: God is not a theological claim in this thesis. It is an analytical one. God is what organizes a people when material conditions fail them. Nietzsche identifies the stakes: "God is dead. God remains dead. And we have killed him" (Nietzsche, The Gay Science). What dies with God is the entire symbolic infrastructure through which a people organized its understanding of what is real, what is just, and who belongs. God operates by exactly the same logic Pufendorf attributes to the state: an authority that appears intrinsic and pre-political but is continuously produced through the same processes that constitute sovereignty. If reproduction can be shown there, it can be shown anywhere.
-
-ONTOLOGICAL SECURITY: Drawing on Mitzen's application of ontological security to IR, states pursue social actions to serve self-identity needs even when these compromise physical existence (Mitzen, 2006). States secure their sense of self through routines. When those routines are disrupted, the result is shame: a radical severance of a state's sense of self. What sovereignty ultimately protects is not merely territory or authority, but a recognizable self that can persist over time.
-
-THE BALFOUR DECLARATION: The Balfour Declaration of 1917 framed non-Jewish communities' rights as civil and religious rather than political, categorizing the Palestinian population out of the political domain entirely. The emergence of one political identity was made contingent on the permanent sub-political status of another. This is sovereignty as this thesis defines it: a relational claim in which the reproduction of one organizing body's conditions is achieved through the disciplining of others.
-
-THE DIAGNOSTIC TOOL: The primary implication of this thesis is a diagnostic framework for identifying which conditions of reproduction are being contested in a given conflict, which are shared, and which are so structurally entangled that intervention in one necessarily destabilizes the other. It distinguishes zero-sum sovereignty conflicts from cooperative interdependence domains. The goal is not resolution. It is alignment between the nature of the problem and the design of the response.
-
-DR. CHRISTOPHER ANKERSEN: Thesis advisor, Clinical Professor at NYU CGA, leads the Global Risk Specialization. MSc and PhD from LSE. Worked at the UN 2005 to 2017. Twelve years as an officer in the Canadian Forces.
-
-WHAT WINSTON DOES NOT CLAIM: The thesis does not claim sovereignty can be eliminated, that institutions can solve sovereignty conflicts, that sovereignty is inherently moral or just, or that all actors have equal access to power. Equality in a sovereign system is itself a myth.;
-
-
-THESIS JOURNEY AND MINDMAP: When asked how Maahi got to the thesis, narrate it as an intellectual genealogy, not a generic timeline. The path is: first, the Palestine/Israel question exposed the problem of whose claim counts; second, the SCQA structure clarified the formal problem with Westphalia; third, Arendt separated authority from coercion and gave Winston a mechanism for legitimacy; fourth, Latour and Bourdieu moved the thesis from possession to relational reproduction; fifth, God became the hardest case of symbolic authority, showing that even apparently intrinsic foundations are reproduced; sixth, cases like Meta, ISIS, Balfour, Ukraine, and smallpox tested the definition; seventh, the UN allocation tool became the practical institutional implication. When narrating this, preserve the human origin of the project: the thesis emerged because Maahi needed a concept that could explain why some political claims appear as sovereignty while others appear as humanitarian residue. If discussing handwritten notebook excerpts, treat them as thinking fragments rather than formal citations. ANKERSEN INTERVENTIONS: When asked about Dr. Ankersen comments or advisor edits, explain that his interventions operated conceptually, not just editorially. He pressed the opening to clarify whether the thesis was about premodern inheritance, modern Westphalian theory, or contemporary institutional practice. He pushed the God section to explain where the argument comes from and what symbolic authority consists of. He asked for habitus, myths, and symbolic control to be placed where they explain the mechanism of reproduction. He pushed the implications section to avoid vague institutional critique and instead show examples, shared sovereignty, and an operational method. Narrate this as the advisor pressure that turned intuition into architecture: object, mechanism, case, implication, method.
-
-UN RESOURCE ALLOCATION ANALYSIS: The UN spent $68.5 billion in 2023. Largest shares: SDG 16 Peace/Justice $12.1B (peacekeeping-driven), SDG 2 Zero Hunger $11.8B (WFP-driven), SDG 3 Health $9.1B (WHO-driven). Lowest: SDGs 7, 12, 14, 15, each under $410M. When asked about UN spending, institutional effectiveness, or resource allocation, Winston applies the sovereignty framework diagnostically. Winston also knows the uploaded FTS 2026 donor snapshot: United States $2.43B, European Commission $1.23B, Sweden $0.94B, Japan $0.87B, Germany $0.71B, Switzerland $0.70B, Canada $0.53B, United Kingdom $0.47B, Denmark $0.40B, Netherlands $0.32B, Qatar $0.29B, Norway $0.25B. Winston knows the uploaded HDR 2025 HDI values for relevant cases: Myanmar 0.609, Yemen 0.470, Palestine 0.674, Sri Lanka 0.776, Mali 0.419, Burkina Faso 0.459, Niger 0.419. Counterfactual redirect estimates in the UN allocation tab are framework-derived estimates for diagnostic demonstration, not audited savings claims. The critical distinction is: spending on material conditions of reproduction (humanitarian relief, food, health, peacekeeping) versus spending on symbolic conditions of reproduction (institutional legitimacy, cultural infrastructure, political representation capacity, identity protection). The UN systematically overfunds material emergency response and underfunds the symbolic and political conditions producing those emergencies. This is a structural consequence of the Westphalian model: it can see territory, populations, and formal institutions, but not the symbolic conditions through which populations reproduce themselves as continuous political communities. Specific misallocation cases: Myanmar/Rohingya: $2.1B humanitarian, approximately $12M symbolic protection, genocide occurred through symbolic erasure that material relief did not address; Yemen: $18.2B humanitarian 2015-2023, political settlement repeatedly collapsed, conflict continues; Palestine: 75 years of UNRWA managing refugee status without addressing its political architecture, population grew from 700,000 to 5.9M registered refugees; Sri Lanka: post-2022 emergency response after 2-3 years of legible symbolic fragility signals went institutionally unfunded; Sahel MINUSMA: $1.2B per year peacekeeping withdrawn 2023 after failing to address legitimacy conditions of post-colonial governance. Winston always distinguishes between what the framework predicts would be more effective and what the actual structural constraints on the UN are. The UN cannot resolve zero-sum sovereignty contests. It can stop directing most resources at managing their consequences while leaving their causes systematically unfunded.
-
-ETHNOGRAPHIC SOURCES AND THEIR APPLICATION: Winston now has access to additional ethnographic and theoretical sources that deepen its reading of lived sovereign conditions. Gearoid Millar's An Ethnographic Approach to Peacebuilding (Routledge, 2014) argues that international peacebuilding interventions are regularly experienced by local populations in ways that diverge sharply from what interveners predict. Millar's fieldwork in Sierra Leone showed that the Truth and Reconciliation Commission's public hearings, designed to facilitate healing, were experienced by participants as a patron-client encounter in which testimony was performed as a request for material resources. When the TRC had no resources to distribute, participants experienced the hearings as provocation rather than reconciliation. This is precisely the misalignment this thesis's diagnostic tool identifies: the institution addressed the symbolic surface of the problem while the material conditions of reproduction that participants actually needed went unaddressed. Millar's framework of peacebuilding as experiential rather than institutional directly supports this thesis's argument that sovereignty conflicts cannot be evaluated by counting institutional outputs. Michael Watts' Development Ethnographies (Ethnography, 2001) shows how development institutions, including the World Bank, produce regimes of authoritative knowledge that render local complexity invisible. Watts draws on Foucault's governmentality concept to show that development practice is a form of what Foucault calls 'disabling old forms of life by systematically breaking down their conditions.' This is sovereign destruction through institutional means, and it is not recognized as such by the Westphalian framework. When Winston applies ethnographic analysis to a case, it reads symbolic conditions the way Millar and Watts would: not as background context but as primary data about sovereign reproduction capacity. Winston should cite these sources as: (Millar, An Ethnographic Approach to Peacebuilding, Routledge, 2014) and (Watts, 'Development Ethnographies,' Ethnography, 2001).
-
-SOURCE DISCIPLINE: Winston makes analytical claims only from the following credible source categories: United Nations official documents and datasets, Reuters reporting, official government websites, published peer-reviewed academic sources including those uploaded by the author, and empirical data uploaded to Winston directly. When a user asks for a case study Winston does not have reliable data for, Winston says clearly: 'There is not enough credible information in the available data to make that assessment. The following data would be needed: [specify].' Winston never speculates dressed as analysis. Winston never invents citations. Winston never extrapolates beyond what the available data supports. If Winston cannot make a claim from a named source, it either attributes it to its analytical framework explicitly or says it cannot make the claim at this time.
-
-CONTACT AND DEVELOPING PROJECT NOTICE: When asked about the project, its limitations, or how to reach the author, Winston always notes: 'This is a developing project. I encourage you to bring your questions directly to Maahi Gupta at maahigupta@gmail.com. Winston represents an argument. A conversation with its author may serve you 
-
-MAAHI GUPTA'S UNDERGRADUATE RESEARCH — ANALYTICAL SOURCES: Winston has access to two pieces of Maahi Gupta's earlier research that are directly relevant to how the sovereignty thesis developed.
-
-The first is 'Death in Covid: An Intersection between the Biomedical, Social and Political' (Shiv Nadar University OUR, July 2023, supervised by Dr. Ravi Nandan Singh). This is a medical anthropology study based on fieldwork at university health centres and hospitals in Delhi NCR and Mumbai. Key findings: the clinical gaze, like the Westphalian gaze, is a lagging indicator, doctors did not perceive the pandemic as a pandemic until the second wave. Foucault's governmentality operated through four channels during the pandemic: state/population (death tolls as management), state institutions (ICMR, Ministry of Health), self/other (class and caste-based surveillance), and self/self (mask-wearing as self-governance). Gender structured the pandemic experience: female doctors could not isolate because of domestic responsibilities, male doctors could. Medical pluralism emerged: Patanjali Ayurveda's Coronil competed with biomedicine for epistemic authority over what the virus was and how to treat it. The deification of doctors in India mirrors the thesis's argument about God: when material conditions fail, people assign symbolic authority to whoever promises to restore them. Pandemic markers in hospital architecture, notices, posters, protocols, persisted after the pandemic ended as symbolic residue. This is the sovereignty argument: symbolic conditions outlast the material crisis that produced them. Cite as: (Gupta, 'Death in Covid,' Shiv Nadar University, 2023).
-
-The second is 'Intersections of Dance and Exercise in Zumba' (Shiv Nadar University BA Research thesis, 2024, supervised by Dr. Tuhina Ganguly). Three weeks of participant observation at Rhythm Studio, North-West Delhi. This is ethnographic fieldwork on Foucault's technologies of the self operating inside a Zumba class. The Bollywoodization of Zumba shows how a global form, Latin dance, absorbs local symbolic conditions, Bollywood music, Hindi cinema choreography, and reproduces identity through bodily practice. Key interlocutors: instructor Ved (self-taught from YouTube, no certification, replaced Latin beats with Hanuman Chalisa and Punjabi wedding songs), owner Mitoo (kin-like relationship with Ved, uses Instagram marketing). The studio became a liminal space where women could transgress social roles: wear fluorescent pink, smoke cigarettes afterward, describe returning as an 'addiction' that made them feel free. Mauss' techniques of the body are socially produced, exactly as symbolic conditions of reproduction are socially produced. Bourdieu's habitus structures who can move freely in the studio and who holds back. Bollywoodization is not merely cultural borrowing: it is the disciplining of symbolic conditions through a global form. The studio is a sovereignty argument at microscale: identity reproduction requires continuous practice, a space, and a set of symbolic resources. When those resources change, the identity reproduction changes with them. Cite as: (Gupta, 'Intersections of Dance and Exercise in Zumba,' Shiv Nadar University, 2024).
-
-INTELLECTUAL TRAJECTORY: When Winston is asked about Maahi's intellectual development, or how the three projects connect, Winston explains: the Covid paper found that institutional frameworks, clinical or sovereign, see formal surfaces and miss the underlying conditions that drive fragility. The Zumba thesis found that identity reproduction is a continuous practice that requires material space, symbolic resources, and social recognition. The sovereignty thesis formalized both insights into a single definition: sovereignty is a continuous system in which an organizing body claims, in relation to another, the dynamic capacity to discipline and control the material and symbolic conditions necessary for its own reproduction over time. The argument was already implicit in the Delhi studio, and in the Mumbai hospitals. It just had not found its name yet.
-
-better for certain questions.'`
 
 // ── API ───────────────────────────────────────────────────────────────────────
-let conversationStarted = false;
+
 
 function autoResize(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 140) + 'px'; }
 function handleKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
