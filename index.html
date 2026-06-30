@@ -31,14 +31,14 @@
   --text-3: #5A5550;
   --red: #C0392B;
   --serif: 'Playfair Display', Georgia, serif;
-  --mono: 'Source Code Pro', 'Courier New', monospace;
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   --sans: 'Lora', Georgia, serif;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 * { box-sizing: border-box; }
 html { font-size:16px; -webkit-font-smoothing:antialiased; }
-body { background:var(--black); color:var(--text); font-family:var(--mono); font-weight:500; height:100vh; overflow:hidden; display:flex; flex-direction:column; -webkit-font-smoothing:antialiased; }
+body { background:var(--black); color:var(--text); font-family:var(--mono); font-weight:600; height:100vh; overflow:hidden; display:flex; flex-direction:column; -webkit-font-smoothing:antialiased; }
 
 /* ═══════════════════════════════════════════
    GATE SCREEN
@@ -406,7 +406,7 @@ header h2 {
 }
 .input-area textarea {
   flex:1; background:#181818; border:1px solid rgba(255,255,255,0.07);
-  border-radius:4px; color:#E8E4DC; font-family:'Courier New',monospace; font-size:15px;
+  border-radius:4px; color:#E8E4DC; font-family:ui-monospace,monospace; font-size:16px;
   line-height:1.6; padding:10px 14px; resize:none; min-height:42px;
   max-height:130px; outline:none; transition:border-color 0.2s;
 }
@@ -541,7 +541,7 @@ canvas { width:100% !important; }
 
 /* alloc */
 .alloc-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:flex-end; }
-.alloc-select { background:var(--surface); border:1px solid var(--border); color:var(--text); font-family:var(--mono); font-size:13px; padding:7px 10px; border-radius:3px; cursor:pointer; outline:none; }
+.alloc-select { background:var(--surface); border:1px solid var(--border); color:var(--text); font-family:var(--mono); font-size:16px; padding:7px 10px; border-radius:3px; cursor:pointer; outline:none; }
 .alloc-select:focus { border-color:var(--gold-mid); }
 .alloc-run-btn { background:var(--gold); border:none; border-radius:3px; color:var(--black); font-family:var(--mono); font-size:13px; font-weight:500; padding:7px 16px; cursor:pointer; letter-spacing:0.08em; transition:opacity 0.2s; text-transform:uppercase; }
 .alloc-run-btn:hover { opacity:0.85; }
@@ -734,7 +734,7 @@ details summary:hover { color:var(--gold); }
   .gate-corner { display:none; }
   .gate-badge { padding:20px 24px 18px; }
   .gate-title { font-size:clamp(22px,6vw,32px); }
-  .gate-input { width:160px; font-size:12px; }
+  .gate-input { width:160px; font-size:16px; }
   .gate-topbar { padding:14px 16px; }
   .gate-bottombar { padding:10px 16px; }
   .gate-ticker-removed { display:none; }
@@ -875,7 +875,7 @@ details summary:hover { color:var(--gold); }
       <div style="display:flex;width:100%;max-width:400px;">
         <input id="gate-input" type="text" placeholder="TYPE CODE EXACTLY" maxlength="25" autocomplete="off" spellcheck="false"
           onkeydown="if(event.key==='Enter')submitGate()"
-          style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.18);border-right:none;color:#E8E4DC;font-family:'Source Code Pro',monospace;font-size:13px;letter-spacing:0.14em;padding:13px 16px;outline:none;text-transform:uppercase;">
+          style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.18);border-right:none;color:#E8E4DC;font-family:ui-monospace,monospace;font-size:16px;letter-spacing:0.1em;padding:13px 16px;outline:none;text-transform:uppercase;">
         <button onclick="submitGate()" style="background:#C9A84C;border:none;color:#0A0A0A;font-family:'Source Code Pro',monospace;font-size:15px;font-weight:700;letter-spacing:0.12em;padding:13px 22px;cursor:pointer;text-transform:uppercase;white-space:nowrap;">
           Enter →
         </button>
@@ -2465,7 +2465,7 @@ function showCase(key, btn) {
       <div class="v-card" style="margin-bottom:16px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
           <h3 style="margin:0">${data.title}</h3>
-          <span class="v-stat ${typeColor}" style="flex:0;padding:4px 10px;min-width:0"><span class="stat-label" style="font-size:13px">${typeLabel}</span></span>
+          <span class="v-stat ${typeColor}" style="flex:0 0 auto;padding:6px 14px;min-width:auto;white-space:nowrap"><span class="stat-label" style="font-size:13px;white-space:nowrap">${typeLabel}</span></span>
         </div>
         <p>${data.summary}</p>
       </div>
@@ -3625,7 +3625,7 @@ function showCase(key, btn) {
       <div class="v-card" style="margin-bottom:16px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
           <h3 style="margin:0">${data.title}</h3>
-          <span class="v-stat ${typeColor}" style="flex:0;padding:4px 10px;min-width:0"><span class="stat-label" style="font-size:13px">${typeLabel}</span></span>
+          <span class="v-stat ${typeColor}" style="flex:0 0 auto;padding:6px 14px;min-width:auto;white-space:nowrap"><span class="stat-label" style="font-size:13px;white-space:nowrap">${typeLabel}</span></span>
         </div>
         <p>${data.summary}</p>
       </div>
